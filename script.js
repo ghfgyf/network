@@ -1,5 +1,5 @@
 // 题目数据（直接嵌入，避免跨域问题）
-const questionsData = [
+const questionsData =[
     {
       "type": "single_choice",
       "question": "1-1 因特网的前身是1969年创建的第一个分组交换网（ ）",
@@ -362,7 +362,7 @@ const questionsData = [
     },
     {
       "type": "single_choice",
-      "question": "1-24 TCP通信双方在基于TCP连接进行通信之前，首先要通过\"三报文握手\"来建立TCP连接，这属于网络协议三要素中的（    ）。",
+      "question": "1-24 TCP通信双方在基于TCP连接进行通信之前，首先要通过“三报文握手”来建立TCP连接，这属于网络协议三要素中的（    ）。",
       "options": ["语法", "语义", "同步", "透明"],
       "answer": "C",
       "explanation": "同步指事件实现顺序的详细说明，如三次握手、四次挥手。",
@@ -460,8 +460,293 @@ const questionsData = [
       "answer": ["帧"],
       "explanation": "",
       "knowledge_point": ""
-    }
-];
+    },
+   
+        {
+          "type": "single_choice",
+          "question": "2-2 某网络在物理层规定，信号的电平用+10V~+15V表示二进制0，用-10V~-15V表示二进制1，电线长度限于15m以内，这体现了物理层接口的（  ）。",
+          "options": ["机械特性", "功能特性", "电气特性", "规程特性"],
+          "answer": "C",
+          "explanation": "电气特性指明在接口电缆的各条线上出现的电压的范围。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-3 当描述一个物理层接口引脚在处于高电平时的含义时，该描述属于（  ）。",
+          "options": ["机械特性", "电气特性", "功能特性", "规程特性"],
+          "answer": "C",
+          "explanation": "功能特性指明某条线上出现的某一电平的电压的意义。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-6 不受电磁干扰和噪声影响的传输介质是（  ）。",
+          "options": ["屏蔽双绞线", "非屏蔽双绞线", "光纤", "同轴电缆"],
+          "answer": "C",
+          "explanation": "光纤利用光信号传输，不受电磁干扰影响。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-4 双绞线是用两根绝缘导线绞合而成的，绞合的主要目的是（  ）。",
+          "options": ["减少干扰", "提高信号传播速率", "增大传输距离", "增大抗拉强度"],
+          "answer": "A",
+          "explanation": "绞合可抵消外部电磁干扰，降低串扰。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-7 多模光纤传输光信号的原理是（  ）。",
+          "options": ["光的折射特性", "光的发射特性", "光的绕射特性", "光的全反射特性"],
+          "answer": "D",
+          "explanation": "光纤依靠全反射使光在纤芯中传播。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-12 对讲机的通信方式属于（  ）。",
+          "options": ["单向通信", "双向交替通信", "双向同时通信", "并行通信"],
+          "answer": "B",
+          "explanation": "对讲机同一时间只能一方发送，属于半双工（双向交替）通信。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-10 被用于计算机内部数据传输的是（  ）。",
+          "options": ["串行传输", "并行传输", "同步传输", "异步传输"],
+          "answer": "B",
+          "explanation": "计算机内部总线通常采用并行传输以提高速度。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-11 一次传输一个字符（5~8位组成），每个字符用一个起始码引导，同一个停止码结束，如果没有数据发送，发送方可以连续发送停止码，这种通信方式称为（  ）。",
+          "options": ["并行传输", "串行传输", "同步传输", "异步传输"],
+          "answer": "D",
+          "explanation": "异步传输以字符为单位，使用起始位和停止位进行同步。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-29 数字基带信号通过（   ）后可在模拟信道进行传输。",
+          "options": ["编码", "解调", "滤波", "调制"],
+          "answer": "D",
+          "explanation": "调制将数字信号转换为适合模拟信道传输的模拟信号。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-30 模拟基带信号通过（  ）后可在数字信道进行传输。",
+          "options": ["编码", "解调", "滤波", "调制"],
+          "answer": "A",
+          "explanation": "需先对模拟信号采样、量化、编码（如PCM），转为数字信号。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-15 不含同步信息的编码是（  ）。 I. 不归零编码 II. 曼彻斯特编码 III. 差分曼彻斯特编码",
+          "options": ["仅I", "仅II", "仅II、III", "I、II、III"],
+          "answer": "A",
+          "explanation": "不归零编码（NRZ）无跳变，无法自同步；曼彻斯特类编码自带时钟信息。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-31 下图所示为某比特串的曼彻斯特编码信号波形，则该比特串为（  ）。",
+          "options": ["0011 0110", "1010 1101", "0101 0010", "1100 0101"],
+          "answer": "A",
+          "explanation": "曼彻斯特编码在每个比特中间跳变，上跳变表示0，下跳变表示1（或反之），本题符合A选项。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-18 若某通信链路的数据传输率为4800b/s，采用8相位调制，则该链路的波特率是（  ）。",
+          "options": ["600Baud", "1200Baud", "1600Baud", "3200Baud"],
+          "answer": "C",
+          "explanation": "8相位 → log₂8 = 3 bit/码元；波特率 = 4800 / 3 = 1600 Baud。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-19 采用8种相位，每种相位各有2种幅度的QAM调制方法，在1200Baud的信号传输速率下能达到的数据传输率为（  ）。",
+          "options": ["2400b/s", "3600b/s", "4800b/s", "9600b/s"],
+          "answer": "C",
+          "explanation": "8×2=16种状态 → log₂16=4 bit/码元；1200×4=4800 b/s。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-21 影响信道最大传输速率的因素主要有（  ）。",
+          "options": ["信道带宽和信噪比", "码元传输速率和噪声功率", "频率特性和带宽", "发送功率和噪声功率"],
+          "answer": "A",
+          "explanation": "香农公式：C = W log₂(1 + S/N)，取决于带宽W和信噪比S/N。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-24 在无噪声情况下，若某通信链路的带宽为4kHz，采用8个相位的调制技术，则该通信链路的最大数据传输速率是（  ）。",
+          "options": ["12kbps", "24kbps", "48kbps", "96kbps"],
+          "answer": "B",
+          "explanation": "奈氏准则：最大码元速率 = 2×4k = 8k Baud；8相位 → 3 bit/码元；8k×3=24kbps。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-25 若链路的频率带宽为4kHz，信噪比为30dB，则该链路的理论最大数据传输速率是（  ）。",
+          "options": ["40kbps", "80kbps", "120kbps", "160kbps"],
+          "answer": "A",
+          "explanation": "30dB → S/N = 10^(30/10) = 1000；C = 4k × log₂(1001) ≈ 4k × 10 = 40kbps。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-26 将物理信道的总频带分割成若干子信道，每个子信道传输一路信号，这种信道复用技术是（  ）。",
+          "options": ["码分复用", "频分复用", "时分复用", "码分多址"],
+          "answer": "B",
+          "explanation": "频分复用（FDM）按频率划分信道。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-1 下列选项中，不属于物理层接口规范定义范畴的是（  ）。",
+          "options": ["引脚功能", "接口形状", "信号电平", "传输媒体"],
+          "answer": "D",
+          "explanation": "传输媒体（如双绞线、光纤）由物理层使用，但其本身不属于接口规范内容。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-33 在物理层接口特性中，用于规定接口电缆中各条信号线上信号电压范围的是（  ）。",
+          "options": ["机械特性", "电气特性", "功能特性", "过程特性"],
+          "answer": "B",
+          "explanation": "电气特性定义电压范围、阻抗、传输速率等。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-34 若下图为网卡接收到的曼彻斯特编码信号的波形，则该网卡收到的比特串是（  ）。",
+          "options": ["00110110", "10101101", "01010010", "11000101"],
+          "answer": "A",
+          "explanation": "同第12题，曼彻斯特编码中间跳变，A选项匹配波形。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-35 在无噪声情况下，若某通信链路的带宽为4kHz，采用4相位，每个相位具有2种振幅的调制技术，则该通信链路的最大数据传输速率是（  ）。",
+          "options": ["16kbps", "24kbps", "32kbps", "48kbps"],
+          "answer": "B",
+          "explanation": "4×2=8种状态 → 3 bit/码元；最大码元速率=8k Baud；8k×3=24kbps。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-36 若某通信链路的数据传输速率为4800bps，采用8相位调制，则该链路的波特率是（  ）。",
+          "options": ["600码元/秒", "1600码元/秒", "2400码元/秒", "4800码元/秒"],
+          "answer": "B",
+          "explanation": "同第13题，4800 / 3 = 1600 码元/秒。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-37 某链路的带宽为4kHz，信噪比为30dB，则该链路的理论最大数据传输速率约为（    ）。",
+          "options": ["4kbps", "30kbps", "40kbps", "120kbps"],
+          "answer": "C",
+          "explanation": "同第17题，香农公式计算得约40kbps。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-41 下图所示为某比特串的曼彻斯特编码信号波形，则该比特串为（  ）。",
+          "options": ["1011 0010", "0100 1100", "0100 0101", "1011 1110"],
+          "answer": "C",
+          "explanation": "根据曼彻斯特编码规则（如高→低为1，低→高为0），解析波形得01000101。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-5 在电缆中采用屏蔽技术带来的好处主要是（  ）。",
+          "options": ["减少信号衰减", "减少电磁干扰辐射", "减少物理损毁", "减少电缆的阻抗"],
+          "answer": "B",
+          "explanation": "屏蔽层可阻挡外部电磁干扰，也减少内部信号辐射。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-13 下列有关曼彻斯特编码的叙述，正确的是（  ）。",
+          "options": [
+            "每个信号起始边界作为时钟信号有利于同步",
+            "将时钟与数据取值都包含在信号中",
+            "这种模拟信号的编码机制特别适用于传输声音",
+            "每位的中间不跳变表示信号的取值为0"
+          ],
+          "answer": "B",
+          "explanation": "曼彻斯特编码在每个比特中间强制跳变，既携带数据又提供时钟同步。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-14 下图是采用曼彻斯特编码的某个信号波形，其表示的比特串为（  ）。",
+          "options": ["11011010", "11011100", "00100111", "00101100"],
+          "answer": "B",
+          "explanation": "根据波形跳变方向判断比特值，符合B选项。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-16 某信道的波特率为1000Baud，若令其数据传输率达到4kb/s，则一个码元所取的有效离散值个数为（      ）。",
+          "options": ["2", "4", "8", "16"],
+          "answer": "D",
+          "explanation": "4000 b/s ÷ 1000 Baud = 4 bit/码元 → 2⁴ = 16 种状态。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-17 已知某信道的数据传输速率为64kb/s，一个载波信号码元有4个有效离散值，则该信道的波特率为（    ）。",
+          "options": ["16kBaud", "32kBaud", "64kBaud", "128kBaud"],
+          "answer": "B",
+          "explanation": "4种状态 → 2 bit/码元；64kb/s ÷ 2 = 32k Baud。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-20 某种调制技术的星座图如下图所示。若其波特率达到1200Baud时，则比特率为（     ）。",
+          "options": ["1200比特/秒", "2400比特/秒", "4800比特/秒", "9600比特/秒"],
+          "answer": "C",
+          "explanation": "假设星座图有16个点（常见题设），则4 bit/码元；1200×4=4800 b/s。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-22 对于某带宽为4000Hz的低通信道，采用16种不同的物理状态来表示数据。按照奈氏准则，信道的最大数据传输速率是（     ）。",
+          "options": ["4kb/s", "8kb/s", "16kb/s", "32kb/s"],
+          "answer": "D",
+          "explanation": "最大码元速率 = 2×4k = 8k Baud；16状态 → 4 bit/码元；8k×4=32kb/s。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-23 电话系统的典型参数是信道带宽为3000Hz，信噪比为30dB，则该系统的最大数据传输率为（      ）。",
+          "options": ["3kb/s", "6kb/s", "30kb/s", "64kb/s"],
+          "answer": "C",
+          "explanation": "30dB → S/N=1000；C = 3k × log₂(1001) ≈ 3k × 10 = 30kb/s。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "short_answer",
+          "question": "2-39 CDMA",
+          "answer": "码分多址",
+          "explanation": "",
+          "knowledge_point": ""
+        },
+        {
+          "type": "fill_in_blank",
+          "question": "2-40 物理层与传输媒体接口有关的四个特性是机械特性、功能特性、过程特性和（     ）。",
+          "answer": ["电气特性"],
+          "explanation": "",
+          "knowledge_point": ""
+        }
+        
+  ];
 
 // 全局变量
 let questions = [];
