@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计算机网络答题系统</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>计算机网络答题系统</h1>
+            <div class="mode-switch">
+                <button class="mode-btn active" data-mode="practice">题目练习</button>
+                <button class="mode-btn" data-mode="exam">组卷练习</button>
+                <button class="mode-btn" data-mode="history">历史成绩</button>
+            </div>
+        </header>
+
+        <!-- 题目练习模式 -->
+        <div id="practice-mode" class="mode-content active">
+            <div class="practice-header">
+                <div class="progress-info">
+                    <span>总题数: <strong id="total-questions">0</strong></span>
+                    <span>已练习: <strong id="practiced-count">0</strong></span>
+                    <span>正确率: <strong id="accuracy-rate">0%</strong></span>
+                </div>
+                <div class="filter-controls">
+                    <select id="type-filter">
+                        <option value="all">全部题型</option>
+                        <option value="single_choice">单选题</option>
+                        <option value="true_false">判断题</option>
+                        <option value="short_answer">简答题</option>
+                        <option value="fill_in_blank">填空题</option>
+                    </select>
+                    <button id="reset-progress" class="btn-secondary">重置进度</button>
+                </div>
+            </div>
+            
+            <div class="practice-layout">
+                <!-- 左侧题号列表 -->
+                <div class="question-nav">
+                    <div class="nav-header">题号列表</div>
+                    <div class="question-number-list" id="question-number-list"></div>
+                </div>
+                
+                <!-- 右侧题目显示 -->
+                <div class="question-display-area">
+                    <div class="current-question" id="current-question"></div>
+                    <div class="question-navigation">
+                        <button id="prev-question" class="btn-secondary">上一题</button>
+                        <span class="question-counter">
+                            第 <strong id="current-index">1</strong> 题 / 共 <strong id="total-filtered">0</strong> 题
+                        </span>
+                        <button id="next-question" class="btn-primary">下一题</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 组卷模式 -->
+        <div id="exam-mode" class="mode-content">
+            <div class="exam-setup">
+                <h2>组卷设置</h2>
+                <div class="setup-form">
+                    <div class="form-group">
+                        <label>试卷名称:</label>
+                        <input type="text" id="exam-name" placeholder="请输入试卷名称" value="计算机网络练习卷">
+                    </div>
+                    <div class="form-group">
+                        <label>选择题型:</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" class="type-checkbox" value="single_choice" checked> 单选题</label>
+                            <label><input type="checkbox" class="type-checkbox" value="true_false" checked> 判断题</label>
+                            <label><input type="checkbox" class="type-checkbox" value="short_answer" checked> 简答题</label>
+                            <label><input type="checkbox" class="type-checkbox" value="fill_in_blank" checked> 填空题</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>题目数量:</label>
+                        <input type="number" id="exam-count" min="1" value="20">
+                    </div>
+                    <button id="generate-exam" class="btn-primary">生成试卷</button>
+                </div>
+            </div>
+
+            <div class="exam-content" id="exam-content" style="display: none;">
+                <div class="exam-header">
+                    <h2 id="current-exam-name"></h2>
+                    <div class="exam-progress">
+                        <span>题目 <strong id="current-question-num">1</strong> / <strong id="total-exam-questions">0</strong></span>
+                        <span>已答: <strong id="answered-count">0</strong></span>
+                    </div>
+                </div>
+                <div class="exam-questions" id="exam-questions"></div>
+                <div class="exam-actions">
+                    <button id="submit-exam" class="btn-primary">提交试卷</button>
+                    <button id="back-to-setup" class="btn-secondary">返回设置</button>
+                </div>
+            </div>
+
+            <div class="exam-result" id="exam-result" style="display: none;">
+                <h2>答题结果</h2>
+                <div class="result-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">总分:</span>
+                        <span class="stat-value" id="total-score">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">正确:</span>
+                        <span class="stat-value correct" id="correct-count">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">错误:</span>
+                        <span class="stat-value wrong" id="wrong-count">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">正确率:</span>
+                        <span class="stat-value" id="exam-accuracy">0%</span>
+                    </div>
+                </div>
+                <div class="result-questions" id="result-questions"></div>
+                <button id="new-exam" class="btn-primary">重新组卷</button>
+            </div>
+        </div>
+
+        <!-- 历史成绩模式 -->
+        <div id="history-mode" class="mode-content">
+            <div class="history-header">
+                <h2>历史答题成绩</h2>
+                <button id="clear-history" class="btn-secondary">清空历史</button>
+            </div>
+            <div class="history-stats">
+                <div class="stat-card">
+                    <div class="stat-label">总答题次数</div>
+                    <div class="stat-value" id="total-exams">0</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">平均正确率</div>
+                    <div class="stat-value" id="avg-accuracy">0%</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">最高分</div>
+                    <div class="stat-value" id="highest-score">0</div>
+                </div>
+            </div>
+            <div class="history-list" id="history-list">
+                <div class="no-history">暂无历史记录</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

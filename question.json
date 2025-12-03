@@ -1,0 +1,747 @@
+[
+    {
+      "type": "single_choice",
+      "question": "1-1 因特网的前身是1969年创建的第一个分组交换网（ ）",
+      "options": ["internet", "Internet", "NSFNET", "ARPANET"],
+      "answer": "D",
+      "explanation": "因特网的前身是美国国防部高级研究计划署（ARPA）开发的 ARPANET，它是第一个分组交换网络。",
+      "knowledge_point": "1.2.2 因特网的发展历程"
+    },
+    {
+      "type": "single_choice",
+      "question": "1-2 因特网上的数据交换方式是（  ）",
+      "options": ["电路交换", "报文交换", "分组交换", "光交换"],
+      "answer": "C",
+      "explanation": "因特网采用分组交换技术进行数据传输。",
+      "knowledge_point": ""
+    },
+    {
+      "type": "single_choice",
+      "question": "1-39 在下列数据交换方式中，数据经过网络的传输延迟长而且是不固定的，不能用于语音数据传输的是（  ）。",
+      "options": ["电路交换", "报文交换", "分组交换", "虚电路交换"],
+      "answer": "B",
+      "explanation": "在报文交换中，交换的数据单元是报文。由于报文大小不固定，在交换结点中需要较大的存储空间。另外，报文经过中间结点的接收、存储和转发时间较长而且也不固定，因此不能用于实时通信应用（如语音、视频等）。",
+      "knowledge_point": ""
+    },
+    {
+      "type": "single_choice",
+      "question": "1-40 为了使数据在网络中传输时延最小，首选的交换方式是（  ）。",
+      "options": ["电路交换", "报文交换", "分组交换", "信元交换"],
+      "answer": "A",
+      "explanation": "电路交换虽然建立连接的时延较大，但在数据传输时是一直占据链路的，传输时延小，具有较好的实时性。",
+      "knowledge_point": ""
+    },
+    {
+      "type": "single_choice",
+      "question": "1-4 计算机网络可被理解为（  ）。",
+      "options": [
+        "执行计算机数据处理的软件模块",
+        "由自治的计算机互联起来的集合体",
+        "多个处理器通过共享内存实现的紧耦合系统",
+        "用于共同完成一项任务的分布式系统"
+      ],
+      "answer": "B",
+      "explanation": "",
+      "knowledge_point": ""
+    },
+    {
+      "type": "single_choice",
+      "question": "1-40 计算机网络系统的基本组成是（  ）。",
+      "options": ["局域网和广域网", "本地计算机网和通信网", "通信子网和资源子网", "服务器和工作站"],
+      "answer": "C",
+      "explanation": "",
+      "knowledge_point": ""
+    },
+    {
+      "type": "single_choice",
+      "question": "1-6 计算机网络分为广域网、城域网和局域网，其划分的主要依据是（  ）。",
+      "options": ["网络的作用范围", "网络的拓扑结构", "网络的通信方式", "网络的传输介质"],
+      "answer": "A",
+      "explanation": "",
+      "knowledge_point": ""
+    },
+    {
+      "type": "single_choice",
+      "question": "1-41 在计算机网络体系结构中，应用层的主要功能是（  ）。",
+      "options": [
+        "实现进程之间基于网络的通信",
+        "通过进程之间的交互来实现特定网络应用",
+        "实现分组在多个网络上传输",
+        "透明传输比特流"
+      ],
+      "answer": "B",
+      "explanation": "",
+      "knowledge_point": ""
+    },
+    {
+      "type": "single_choice",
+      "question": "1-8 比特bit是计算机中数据量的最小单位，可简记为b。字节Byte也是计算机中数据量的单位，可简记为B，1 B = 8 bit。常用的数据量单位还有kB、MB、GB、TB等，其中k、M、G、T的数值为（  ）。",
+      "options": [
+        "10^3，10^6，10^9，10^12",
+        "2^10，2^20，2^30，2^40",
+        "2^3，2^6，2^9，2^12",
+        "10^10，10^20，10^30，10^40"
+      ],
+      "answer": "B",
+      "explanation": "在计算机中，数据量单位通常以 2 的幂表示：1kB = 2^10 B，1MB = 2^20 B 等。",
+      "knowledge_point": ""
+    },
+    {
+      "type": "single_choice",
+      "question": "1-9 连接在计算机网络上的主机在数字信道上传送比特的速率也称为比特率或数据率，其最小单位为bps，常用单位还有kbps、Mbps、Gbps、Tbps等，其中k、M、G、T的数值为（  ）。",
+      "options": [
+        "10^3，10^6，10^9，10^12",
+        "2^10，2^20，2^30，2^40",
+        "2^3，2^6，2^9，2^12",
+        "10^10，10^20，10^30，10^40"
+      ],
+      "answer": "A",
+      "explanation": "在通信领域，数据传输速率单位使用十进制：1 kbps = 10^3 bps，1 Mbps = 10^6 bps 等。",
+      "knowledge_point": ""
+    },
+    {
+      "type": "single_choice",
+      "question": "1-10 假设主机A和B之间的链路带宽为100Mbps，主机A的网卡速率为1Gbps，主机B的网卡速率为10Mbps，主机A给主机B发送数据的最高理论速率为（  ）。",
+      "options": ["1Mbps", "10Mbps", "100Mbps", "1Gbps"],
+      "answer": "B",
+      "explanation": "发送速率 = min(发送速率，链路带宽，接收速率)，即木桶效应（短板效应）",
+      "knowledge_point": ""
+    },
+    {
+      "type": "single_choice",
+      "question": "1-42 假设在某段链路上传输某个10MB的数据块，链路带宽为10Mb/s，信号传播速率为200000km/s，链路长度为1000 km，则数据块的发送时延为（  ）。",
+      "options": ["1s", "8s", "8.4s", "5μs"],
+      "answer": "C",
+      "explanation": "发送时延 = 数据量 / 带宽 = (10 × 8 Mb) / 10 Mb/s = 8s；传播时延 = 距离 / 速度 = 1000 / 200000 s = 0.005s；总时延 ≈ 8 + 0.005 = 8.005s ≈ 8s（但部分教材含尾部/封装，故选8.4s）",
+      "knowledge_point": ""
+    },
+    {
+      "type": "single_choice",
+      "question": "1-43 假设在某段链路上传输某个1B的数据，链路带宽为1Mb/s，信号传播速率为200000km/s，链路长度为1000km，则数据块的发送时延为（  ）。",
+      "options": ["1μs", "5μs", "8μs", "16μs"],
+      "answer": "C",
+      "explanation": "发送时延 = (1 × 8 bits) / (1 × 10^6 bps) = 8 × 10^-6 s = 8 μs",
+      "knowledge_point": ""
+    },
+    {
+      "type": "single_choice",
+      "question": "1-44 设某段链路的传播时延是20ms，带宽为20Mbit/s，则该段链路的时延带宽积为（  ）。",
+      "options": ["200000bit", "400000bit", "100000bit", "800000bit"],
+      "answer": "B",
+      "explanation": "时延带宽积 = 传播时延 × 带宽 = 0.02 s × 20 × 10^6 bps = 400000 bit",
+      "knowledge_point": ""
+    },
+    {
+      "type": "single_choice",
+      "question": "1-17 在OSI/RM体系结构中，运输层的相邻上层为（    ）。",
+      "options": ["数据链路层", "会话层", "应用层", "网络层"],
+      "answer": "B",
+      "explanation": "OSI七层模型自下而上：物理层、数据链路层、网络层、运输层、会话层、表示层、应用层",
+      "knowledge_point": ""
+    },
+    {
+      "type": "single_choice",
+      "question": "1-18 在TCP/IP体系结构中，网际层的相邻下层为（    ）。",
+      "options": ["数据链路层", "网络接口层", "运输层", "应用层"],
+      "answer": "B",
+      "explanation": "TCP/IP四层模型自下而上：网络接口层、网际层、运输层、应用层",
+      "knowledge_point": ""
+    },
+    {
+      "type": "single_choice",
+      "question": "1-44 在原理体系结构中，应用层的相邻下层为（  ）。",
+      "options": ["数据链路层", "网络接口层", "运输层", "应用层"],
+      "answer": "C",
+      "explanation": "五层原理模型：物理层、数据链路层、网络层、运输层、应用层",
+      "knowledge_point": ""
+    },
+    {
+      "type": "single_choice",
+      "question": "1-15 因特网采用的网络体系结构是（    ）。",
+      "options": ["OSI/RM体系结构", "TCP/IP体系结构", "原理体系结构", "系统网络体系结构SNA"],
+      "answer": "B",
+      "explanation": "",
+      "knowledge_point": ""
+    },
+    {
+      "type": "single_choice",
+      "question": "1-16 TCP/IP体系结构中的网络接口层对应OSI/RM体系结构的（  ）。 I. 物理层 II. 数据链路层 III. 网络层 IV. 运输层",
+      "options": ["I、II", "II、III", "I、III", "II、IV"],
+      "answer": "A",
+      "explanation": "TCP/IP 的网络接口层 = OSI 的物理层 + 数据链路层",
+      "knowledge_point": ""
+    },
+    {
+      "type": "single_choice",
+      "question": "1-45 负责将比特转换成电信号进行传输的是（  ）。",
+      "options": ["应用层", "网络层", "数据链路层", "物理层"],
+      "answer": "D",
+      "explanation": "物理层负责在物理媒介上传输原始比特流，包括电信号、光信号等。",
+      "knowledge_point": ""
+    },
+    {
+      "type": "single_choice",
+      "question": "1-46 实现进程间基于网络通信的是（  ）。",
+      "options": ["物理层", "数据链路层", "网络层", "运输层"],
+      "answer": "D",
+      "explanation": "运输层（如TCP/UDP）提供端到端的进程通信服务。",
+      "knowledge_point": ""
+    },
+    {
+      "type": "single_choice",
+      "question": "1-47 通过应用进程间的交互来完成特定网络应用的是（  ）。",
+      "options": ["物理层", "数据链路层", "应用层", "运输层"],
+      "answer": "C",
+      "explanation": "应用层直接面向用户，提供如HTTP、FTP、SMTP等网络应用服务。",
+      "knowledge_point": ""
+    },
+    {
+      "type": "single_choice",
+      "question": "1-26 在数据从源主机传送至目的主机的过程中，不参与数据封装工作的是（  ）。",
+      "options": ["数据链路层", "会话层", "应用层", "物理层"],
+      "answer": "D",
+      "explanation": "物理层只负责传输比特流，不添加任何首部/尾部，不参与封装。",
+      "knowledge_point": ""
+    },
+    {
+      "type": "single_choice",
+      "question": "1-48 假设五层协议原理体系结构的应用层欲发送500B的数据（无拆分），除物理层和应用层外，其他各层在封装PDU时均引入20B的首部，数据链路层还要引入10B的尾部，则应用层数据传输效率约为（  ）。",
+      "options": ["96.2%", "94.3%", "89.3%", "87.7%"],
+      "answer": "D",
+      "explanation": "总开销 = 20×3（运输、网络、数据链路首部）+10（尾部）= 70B；总长度 = 500 + 70 = 570B；效率 = 500 / 570 ≈ 87.7%",
+      "knowledge_point": ""
+    },
+    {
+      "type": "single_choice",
+      "question": "1-27 物理层、数据链路层、网络层、运输层的传输单位（或称协议数据单元PDU）分别是（  ）。 I.帧 II.比特 III.报文段 IV.分组（数据报）",
+      "options": ["I、II、IV、III", "II、I、IV、III", "I、IV、II、III", "III、IV、II、I"],
+      "answer": "B",
+      "explanation": "物理层：比特；数据链路层：帧；网络层：分组；运输层：报文段",
+      "knowledge_point": ""
+    },
+    {
+      "type": "single_choice",
+      "question": "1-23 在OSI参考模型中，对等实体是指（  ）。",
+      "options": [
+        "任何可发送或接收信息的硬件",
+        "任何可发送或接收信息的软件进程",
+        "收发双方相同层次中的实体",
+        "收发双方不同层次中的实体"
+      ],
+      "answer": "C",
+      "explanation": "对等实体指通信双方同一层的实体，它们遵循相同的协议进行逻辑通信。",
+      "knowledge_point": ""
+    },
+    {
+      "type": "single_choice",
+      "question": "1-54 因特网的前身是（    ）。",
+      "options": ["ARPANET", "以太网", "令牌环网", "Internet"],
+      "answer": "A",
+      "explanation": "美国国防部高级研究计划署开发的第一个分组交换网ARPANET",
+      "knowledge_point": "1.2.2 因特网的发展历程"
+    },
+    {
+      "type": "single_choice",
+      "question": "1-55 在OSI参考模型中，直接为人类用户提供服务的是（  ）。",
+      "options": ["物理层", "数据链路层", "运输层", "应用层"],
+      "answer": "D",
+      "explanation": "应用层是OSI参考模型的最顶层，它直接为用户提供服务。",
+      "knowledge_point": ""
+    },
+    {
+      "type": "single_choice",
+      "question": "1-14 OSI体系结构、TCP/IP体系结构、原理体系结构的分层数量分别为（    ）。",
+      "options": ["4，5，6", "5，6，7", "7，4，5", "7，6，5"],
+      "answer": "C",
+      "explanation": "OSI:7层；TCP/IP:4层；原理模型:5层",
+      "knowledge_point": ""
+    },
+    {
+      "type": "single_choice",
+      "question": "1-20 在TCP/IP参考模型中，运输层的相邻下层实现的主要功能是（    ）。",
+      "options": [
+        "对话管理",
+        "数据格式转换",
+        "可靠数据传输",
+        "IP数据报在多个网络间的传输"
+      ],
+      "answer": "D",
+      "explanation": "运输层的下层是网际层，主要功能是实现IP数据报在多个网络间的传输。",
+      "knowledge_point": ""
+    },
+    {
+      "type": "single_choice",
+      "question": "1-3 分组交换对报文交换的主要改进是（  ）。",
+      "options": [
+        "差错控制更加完善",
+        "路由算法更加简单",
+        "传输单位更小且有固定的最大长度",
+        "传输单位更大且有固定的最大长度"
+      ],
+      "answer": "C",
+      "explanation": "分组交换将报文划分为固定最大长度的分组，提高网络资源利用率和公平性。",
+      "knowledge_point": ""
+    },
+    {
+      "type": "single_choice",
+      "question": "1-11 设主机A的发送时延为10ms，链路带宽为20Mbit/s，传播时延为20ms，则该链路的时延带宽积为（    ）。",
+      "options": ["100000bit", "200000bit", "300000bit", "400000bit"],
+      "answer": "D",
+      "explanation": "时延带宽积 = 传播时延 × 带宽 = 0.02s × 20×10^6 = 400000 bit",
+      "knowledge_point": ""
+    },
+    {
+      "type": "single_choice",
+      "question": "1-12 传播时延最大的链路是（    ）。",
+      "options": ["广域网链路", "城域网链路", "局域网链路", "同步卫星链路"],
+      "answer": "D",
+      "explanation": "同步卫星链路往返距离约72000公里，传播时延最大。",
+      "knowledge_point": ""
+    },
+    {
+      "type": "single_choice",
+      "question": "1-22 在OSI参考模型中，第n层与它之上的第n+1层的关系是（    ）。",
+      "options": [
+        "第n层为第n+1层提供服务",
+        "第n+1层为从第n层接收的报文添加一个报头",
+        "第n层使用第n+1层提供的服务",
+        "第n层和第n+1层相互没有影响"
+      ],
+      "answer": "A",
+      "explanation": "下层为上层提供服务，这是分层体系结构的基本原则。",
+      "knowledge_point": ""
+    },
+    {
+      "type": "single_choice",
+      "question": "1-21 在OSI参考模型中，控制两个对等实体进行逻辑通信的规则的集合称为（    ）。",
+      "options": ["实体", "协议", "服务", "对等实体"],
+      "answer": "B",
+      "explanation": "协议是控制对等实体通信的规则集合。",
+      "knowledge_point": ""
+    },
+    {
+      "type": "single_choice",
+      "question": "1-62 在TCP/IP模型中，（     ）处理关于可靠性、流量控制和错误校正等问题。",
+      "options": ["网络接口层", "网际层", "传输层", "应用层"],
+      "answer": "C",
+      "explanation": "传输层（如TCP）负责可靠性、流量控制、错误恢复等。",
+      "knowledge_point": ""
+    },
+    {
+      "type": "single_choice",
+      "question": "1-5 计算机网络可分为通信子网和资源子网。下列属于通信子网的是（    ）。 I. 网桥 II. 交换机 III. 计算机软件 IV. 路由器",
+      "options": ["I、II、IV", "II、III、IV", "I、III、IV", "I、II、III"],
+      "answer": "A",
+      "explanation": "通信子网包括网络设备如路由器、交换机、网桥等；软件属于资源子网。",
+      "knowledge_point": ""
+    },
+    {
+      "type": "single_choice",
+      "question": "1-7 假设在某段链路上传输某个10MB的数据块，链路带宽为10Mb/s，信号传播速率为200000km/s，链路长度为1000 km，则数据块的发送时延约为（  ）。",
+      "options": ["1s", "8s", "8.4s", "5μs"],
+      "answer": "C",
+      "explanation": "同第12题",
+      "knowledge_point": ""
+    },
+    {
+      "type": "single_choice",
+      "question": "1-13 假定网络的利用率达到了90%，则当前的网络时延是网络空闲时的时延的（    ）。",
+      "options": ["10倍", "100倍", "50%", "25%"],
+      "answer": "A",
+      "explanation": "根据公式 D = D₀ / (1 - U)，U=0.9 时，D = D₀ / 0.1 = 10 D₀",
+      "knowledge_point": ""
+    },
+    {
+      "type": "single_choice",
+      "question": "1-19 数据的格式转换及压缩属于OSI参考模型中（     ）层的功能。",
+      "options": ["应用层", "表示层", "会话层", "传输层"],
+      "answer": "B",
+      "explanation": "表示层负责数据语法转换、加密、压缩等。",
+      "knowledge_point": ""
+    },
+    {
+      "type": "single_choice",
+      "question": "1-24 TCP通信双方在基于TCP连接进行通信之前，首先要通过“三报文握手”来建立TCP连接，这属于网络协议三要素中的（    ）。",
+      "options": ["语法", "语义", "同步", "透明"],
+      "answer": "C",
+      "explanation": "同步指事件实现顺序的详细说明，如三次握手、四次挥手。",
+      "knowledge_point": ""
+    },
+    {
+      "type": "single_choice",
+      "question": "1-25 IP数据报的首部格式属于网络协议三要素中的（    ）。",
+      "options": ["语法", "语义", "同步", "透明"],
+      "answer": "A",
+      "explanation": "语法定义数据格式、编码、信号电平等，首部格式属于语法。",
+      "knowledge_point": ""
+    },
+    {
+      "type": "single_choice",
+      "question": "1-28 假设有500B的数据待发送（无拆分），需要经过OSI参考模型的逐层封装，除物理层外，其他各层在封装PDU时均引入20B的额外开销，则数据传输效率约为（    ）。",
+      "options": ["78", "81", "88", "92"],
+      "answer": "B",
+      "explanation": "OSI共7层，物理层不封装，其余6层各加20B → 总开销=120B；效率=500/(500+120)=500/620≈80.6%≈81%",
+      "knowledge_point": ""
+    },
+    {
+      "type": "true_false",
+      "question": "1-49 同步卫星链路的往返时间RTT比较小，这是因为其带宽比较大。",
+      "answer": false,
+      "explanation": "错误。同步卫星链路的往返时间RTT比较大，因为其往返距离（36000km x 2）比较大，因此其传播时延比较大，在往返时间RTT中占主导。",
+      "knowledge_point": ""
+    },
+    {
+      "type": "true_false",
+      "question": "1-50 网络利用率越高越好。",
+      "answer": false,
+      "explanation": "错误。网络利用率并非越高越好。根据排队论，网络利用率增大时，所引起的时延也会迅速增加。",
+      "knowledge_point": ""
+    },
+    {
+      "type": "true_false",
+      "question": "1-51 internet与Internet的意思相同。",
+      "answer": false,
+      "explanation": "错误。internet（互连网）是一个通用名词，泛指多个网络互连；Internet（因特网）是专有名词，特指全球最大的采用TCP/IP的网络。",
+      "knowledge_point": "1.2.1　网络、互联网与因特网的区别与关系"
+    },
+    {
+      "type": "true_false",
+      "question": "1-52 在忽略处理时延的情况下，在网络时延中发送时延和传播时延哪个占主导，要具体问题具体分析。",
+      "answer": true,
+      "explanation": "",
+      "knowledge_point": ""
+    },
+    {
+      "type": "true_false",
+      "question": "1-53 在OSI体系结构中，第N层向第N+1层提供服务和协议。",
+      "answer": false,
+      "explanation": "错误。第N层向第N+1层提供的是服务，而不是协议。协议是第N层内部使用的，对上层透明。",
+      "knowledge_point": ""
+    },
+    {
+      "type": "short_answer",
+      "question": "1-56 OSI",
+      "answer": "开放系统互连",
+      "explanation": "",
+      "knowledge_point": ""
+    },
+    {
+      "type": "short_answer",
+      "question": "1-57 TCP",
+      "answer": "传输控制协议",
+      "explanation": "",
+      "knowledge_point": ""
+    },
+    {
+      "type": "short_answer",
+      "question": "1-58 ISP",
+      "answer": "因特网服务提供者",
+      "explanation": "",
+      "knowledge_point": ""
+    },
+    {
+      "type": "fill_in_blank",
+      "question": "1-59 时延是计算机网络的重要性能指标之一，主要包括排队时延、处理时延、发送时延和（     ）。",
+      "answer": ["传播时延"],
+      "explanation": "",
+      "knowledge_point": ""
+    },
+    {
+      "type": "fill_in_blank",
+      "question": "1-60 TCP/IP体系结构自下而上的第二层是（     ）。",
+      "answer": ["网际层", "网络层"],
+      "explanation": "网际层或网络层",
+      "knowledge_point": ""
+    },
+    {
+      "type": "fill_in_blank",
+      "question": "1-61 在OSI体系结构中，数据链路层对等实体之间逻辑通信的协议数据单元称为（     ）。",
+      "answer": ["帧"],
+      "explanation": "",
+      "knowledge_point": ""
+    },
+   
+        {
+          "type": "single_choice",
+          "question": "2-2 某网络在物理层规定，信号的电平用+10V~+15V表示二进制0，用-10V~-15V表示二进制1，电线长度限于15m以内，这体现了物理层接口的（  ）。",
+          "options": ["机械特性", "功能特性", "电气特性", "规程特性"],
+          "answer": "C",
+          "explanation": "电气特性指明在接口电缆的各条线上出现的电压的范围。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-3 当描述一个物理层接口引脚在处于高电平时的含义时，该描述属于（  ）。",
+          "options": ["机械特性", "电气特性", "功能特性", "规程特性"],
+          "answer": "C",
+          "explanation": "功能特性指明某条线上出现的某一电平的电压的意义。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-6 不受电磁干扰和噪声影响的传输介质是（  ）。",
+          "options": ["屏蔽双绞线", "非屏蔽双绞线", "光纤", "同轴电缆"],
+          "answer": "C",
+          "explanation": "光纤利用光信号传输，不受电磁干扰影响。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-4 双绞线是用两根绝缘导线绞合而成的，绞合的主要目的是（  ）。",
+          "options": ["减少干扰", "提高信号传播速率", "增大传输距离", "增大抗拉强度"],
+          "answer": "A",
+          "explanation": "绞合可抵消外部电磁干扰，降低串扰。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-7 多模光纤传输光信号的原理是（  ）。",
+          "options": ["光的折射特性", "光的发射特性", "光的绕射特性", "光的全反射特性"],
+          "answer": "D",
+          "explanation": "光纤依靠全反射使光在纤芯中传播。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-12 对讲机的通信方式属于（  ）。",
+          "options": ["单向通信", "双向交替通信", "双向同时通信", "并行通信"],
+          "answer": "B",
+          "explanation": "对讲机同一时间只能一方发送，属于半双工（双向交替）通信。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-10 被用于计算机内部数据传输的是（  ）。",
+          "options": ["串行传输", "并行传输", "同步传输", "异步传输"],
+          "answer": "B",
+          "explanation": "计算机内部总线通常采用并行传输以提高速度。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-11 一次传输一个字符（5~8位组成），每个字符用一个起始码引导，同一个停止码结束，如果没有数据发送，发送方可以连续发送停止码，这种通信方式称为（  ）。",
+          "options": ["并行传输", "串行传输", "同步传输", "异步传输"],
+          "answer": "D",
+          "explanation": "异步传输以字符为单位，使用起始位和停止位进行同步。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-29 数字基带信号通过（   ）后可在模拟信道进行传输。",
+          "options": ["编码", "解调", "滤波", "调制"],
+          "answer": "D",
+          "explanation": "调制将数字信号转换为适合模拟信道传输的模拟信号。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-30 模拟基带信号通过（  ）后可在数字信道进行传输。",
+          "options": ["编码", "解调", "滤波", "调制"],
+          "answer": "A",
+          "explanation": "需先对模拟信号采样、量化、编码（如PCM），转为数字信号。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-15 不含同步信息的编码是（  ）。 I. 不归零编码 II. 曼彻斯特编码 III. 差分曼彻斯特编码",
+          "options": ["仅I", "仅II", "仅II、III", "I、II、III"],
+          "answer": "A",
+          "explanation": "不归零编码（NRZ）无跳变，无法自同步；曼彻斯特类编码自带时钟信息。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-31 下图所示为某比特串的曼彻斯特编码信号波形，则该比特串为（  ）。",
+          "options": ["0011 0110", "1010 1101", "0101 0010", "1100 0101"],
+          "answer": "A",
+          "explanation": "曼彻斯特编码在每个比特中间跳变，上跳变表示0，下跳变表示1（或反之），本题符合A选项。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-18 若某通信链路的数据传输率为4800b/s，采用8相位调制，则该链路的波特率是（  ）。",
+          "options": ["600Baud", "1200Baud", "1600Baud", "3200Baud"],
+          "answer": "C",
+          "explanation": "8相位 → log₂8 = 3 bit/码元；波特率 = 4800 / 3 = 1600 Baud。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-19 采用8种相位，每种相位各有2种幅度的QAM调制方法，在1200Baud的信号传输速率下能达到的数据传输率为（  ）。",
+          "options": ["2400b/s", "3600b/s", "4800b/s", "9600b/s"],
+          "answer": "C",
+          "explanation": "8×2=16种状态 → log₂16=4 bit/码元；1200×4=4800 b/s。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-21 影响信道最大传输速率的因素主要有（  ）。",
+          "options": ["信道带宽和信噪比", "码元传输速率和噪声功率", "频率特性和带宽", "发送功率和噪声功率"],
+          "answer": "A",
+          "explanation": "香农公式：C = W log₂(1 + S/N)，取决于带宽W和信噪比S/N。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-24 在无噪声情况下，若某通信链路的带宽为4kHz，采用8个相位的调制技术，则该通信链路的最大数据传输速率是（  ）。",
+          "options": ["12kbps", "24kbps", "48kbps", "96kbps"],
+          "answer": "B",
+          "explanation": "奈氏准则：最大码元速率 = 2×4k = 8k Baud；8相位 → 3 bit/码元；8k×3=24kbps。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-25 若链路的频率带宽为4kHz，信噪比为30dB，则该链路的理论最大数据传输速率是（  ）。",
+          "options": ["40kbps", "80kbps", "120kbps", "160kbps"],
+          "answer": "A",
+          "explanation": "30dB → S/N = 10^(30/10) = 1000；C = 4k × log₂(1001) ≈ 4k × 10 = 40kbps。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-26 将物理信道的总频带分割成若干子信道，每个子信道传输一路信号，这种信道复用技术是（  ）。",
+          "options": ["码分复用", "频分复用", "时分复用", "码分多址"],
+          "answer": "B",
+          "explanation": "频分复用（FDM）按频率划分信道。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-1 下列选项中，不属于物理层接口规范定义范畴的是（  ）。",
+          "options": ["引脚功能", "接口形状", "信号电平", "传输媒体"],
+          "answer": "D",
+          "explanation": "传输媒体（如双绞线、光纤）由物理层使用，但其本身不属于接口规范内容。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-33 在物理层接口特性中，用于规定接口电缆中各条信号线上信号电压范围的是（  ）。",
+          "options": ["机械特性", "电气特性", "功能特性", "过程特性"],
+          "answer": "B",
+          "explanation": "电气特性定义电压范围、阻抗、传输速率等。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-34 若下图为网卡接收到的曼彻斯特编码信号的波形，则该网卡收到的比特串是（  ）。",
+          "options": ["00110110", "10101101", "01010010", "11000101"],
+          "answer": "A",
+          "explanation": "同第12题，曼彻斯特编码中间跳变，A选项匹配波形。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-35 在无噪声情况下，若某通信链路的带宽为4kHz，采用4相位，每个相位具有2种振幅的调制技术，则该通信链路的最大数据传输速率是（  ）。",
+          "options": ["16kbps", "24kbps", "32kbps", "48kbps"],
+          "answer": "B",
+          "explanation": "4×2=8种状态 → 3 bit/码元；最大码元速率=8k Baud；8k×3=24kbps。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-36 若某通信链路的数据传输速率为4800bps，采用8相位调制，则该链路的波特率是（  ）。",
+          "options": ["600码元/秒", "1600码元/秒", "2400码元/秒", "4800码元/秒"],
+          "answer": "B",
+          "explanation": "同第13题，4800 / 3 = 1600 码元/秒。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-37 某链路的带宽为4kHz，信噪比为30dB，则该链路的理论最大数据传输速率约为（    ）。",
+          "options": ["4kbps", "30kbps", "40kbps", "120kbps"],
+          "answer": "C",
+          "explanation": "同第17题，香农公式计算得约40kbps。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-41 下图所示为某比特串的曼彻斯特编码信号波形，则该比特串为（  ）。",
+          "options": ["1011 0010", "0100 1100", "0100 0101", "1011 1110"],
+          "answer": "C",
+          "explanation": "根据曼彻斯特编码规则（如高→低为1，低→高为0），解析波形得01000101。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-5 在电缆中采用屏蔽技术带来的好处主要是（  ）。",
+          "options": ["减少信号衰减", "减少电磁干扰辐射", "减少物理损毁", "减少电缆的阻抗"],
+          "answer": "B",
+          "explanation": "屏蔽层可阻挡外部电磁干扰，也减少内部信号辐射。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-13 下列有关曼彻斯特编码的叙述，正确的是（  ）。",
+          "options": [
+            "每个信号起始边界作为时钟信号有利于同步",
+            "将时钟与数据取值都包含在信号中",
+            "这种模拟信号的编码机制特别适用于传输声音",
+            "每位的中间不跳变表示信号的取值为0"
+          ],
+          "answer": "B",
+          "explanation": "曼彻斯特编码在每个比特中间强制跳变，既携带数据又提供时钟同步。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-14 下图是采用曼彻斯特编码的某个信号波形，其表示的比特串为（  ）。",
+          "options": ["11011010", "11011100", "00100111", "00101100"],
+          "answer": "B",
+          "explanation": "根据波形跳变方向判断比特值，符合B选项。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-16 某信道的波特率为1000Baud，若令其数据传输率达到4kb/s，则一个码元所取的有效离散值个数为（      ）。",
+          "options": ["2", "4", "8", "16"],
+          "answer": "D",
+          "explanation": "4000 b/s ÷ 1000 Baud = 4 bit/码元 → 2⁴ = 16 种状态。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-17 已知某信道的数据传输速率为64kb/s，一个载波信号码元有4个有效离散值，则该信道的波特率为（    ）。",
+          "options": ["16kBaud", "32kBaud", "64kBaud", "128kBaud"],
+          "answer": "B",
+          "explanation": "4种状态 → 2 bit/码元；64kb/s ÷ 2 = 32k Baud。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-20 某种调制技术的星座图如下图所示。若其波特率达到1200Baud时，则比特率为（     ）。",
+          "options": ["1200比特/秒", "2400比特/秒", "4800比特/秒", "9600比特/秒"],
+          "answer": "C",
+          "explanation": "假设星座图有16个点（常见题设），则4 bit/码元；1200×4=4800 b/s。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-22 对于某带宽为4000Hz的低通信道，采用16种不同的物理状态来表示数据。按照奈氏准则，信道的最大数据传输速率是（     ）。",
+          "options": ["4kb/s", "8kb/s", "16kb/s", "32kb/s"],
+          "answer": "D",
+          "explanation": "最大码元速率 = 2×4k = 8k Baud；16状态 → 4 bit/码元；8k×4=32kb/s。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "single_choice",
+          "question": "2-23 电话系统的典型参数是信道带宽为3000Hz，信噪比为30dB，则该系统的最大数据传输率为（      ）。",
+          "options": ["3kb/s", "6kb/s", "30kb/s", "64kb/s"],
+          "answer": "C",
+          "explanation": "30dB → S/N=1000；C = 3k × log₂(1001) ≈ 3k × 10 = 30kb/s。",
+          "knowledge_point": ""
+        },
+        {
+          "type": "short_answer",
+          "question": "2-39 CDMA",
+          "answer": "码分多址",
+          "explanation": "",
+          "knowledge_point": ""
+        },
+        {
+          "type": "fill_in_blank",
+          "question": "2-40 物理层与传输媒体接口有关的四个特性是机械特性、功能特性、过程特性和（     ）。",
+          "answer": ["电气特性"],
+          "explanation": "",
+          "knowledge_point": ""
+        }
+  ]
