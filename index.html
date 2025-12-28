@@ -3,13 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>计算机网络答题系统</title>
+    <title>在线答题系统</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>计算机网络答题系统</h1>
+            <h1>在线答题系统</h1>
+            <div class="course-selector">
+                <label>选择课程：</label>
+                <select id="course-select">
+                    <option value="network">计算机网络</option>
+                    <option value="datastructure">数据结构</option>
+                    <option value="marxism">马克思主义原理</option>
+                </select>
+            </div>
             <div class="mode-switch">
                 <button class="mode-btn active" data-mode="practice">题目练习</button>
                 <button class="mode-btn" data-mode="exam">组卷练习</button>
