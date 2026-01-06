@@ -4173,7 +4173,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "Python语言环境的提示符是>>>。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "在系统的控制台界面上输入python后即可进入Python控制台，可看到其提示符是>>>。",
       knowledge_point: "第1章 Python语言概述"
     },
@@ -4181,7 +4181,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "注释的作用是增强程序可读性，并不会实际运行。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "与其他编程语言一样，注释是对程序代码的解释说明、以增强程序可读性，实际运行程序时注释并不会起作用。",
       knowledge_point: "第1章 Python语言概述"
     },
@@ -4189,7 +4189,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "调试是为了解决语法错误。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "如果程序中存在语法错误，则程序运行时会给出相应错误提示，根据错误提示即可修改，通常不需要调试。调试主要是为了解决逻辑错误（程序能运行但结果不对），需通过断点、变量监控等方式排查。",
       knowledge_point: "第1章 Python语言概述"
     },
@@ -4357,7 +4357,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "表达式 len(zip([1,2,3], 'abcdefg')) 的值为 3。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "zip 返回的是迭代器，不能直接用 len() 获取长度；需先转为 list 才能求长度。",
       knowledge_point: "第2章 运算符、表达式与内置对象"
     },
@@ -4365,7 +4365,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "已知 x = 3，那么赋值语句 x = 'abcedfg' 是无法正常执行的。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "Python 是动态类型语言，变量可随时重新绑定到任意类型对象。",
       knowledge_point: "第2章 运算符、表达式与内置对象"
     },
@@ -4373,7 +4373,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "0o12f 是合法的八进制数字。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "八进制只能包含 0-7 的数字，'f' 是非法字符。",
       knowledge_point: "第2章 运算符、表达式与内置对象"
     },
@@ -4381,7 +4381,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "x = 9999**9999 这样的语句在 Python 中无法运行，因为数字太大了超出了整型变量的表示范围。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "Python 支持任意精度整数，不会因数值过大而溢出。",
       knowledge_point: "第2章 运算符、表达式与内置对象"
     },
@@ -4389,7 +4389,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "Python 变量使用前必须先声明，并且一旦声明就不能在当前作用域内改变其类型了。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "Python 无需声明变量，且变量类型可动态改变。",
       knowledge_point: "第2章 运算符、表达式与内置对象"
     },
@@ -4597,7 +4597,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "元组是不可变的，可以作为字典元素的“键”，但不能作为字典元素的“值”。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "元组可以作为字典的键（因其不可变），也可以作为字典的值（字典的值可以是任意类型）。",
       knowledge_point: "第3章 Python序列结构"
     },
@@ -4605,7 +4605,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "已知 x = [1, 3, 5, 7, 9, 11]，那么执行语句 x[:3] = reversed(x[:3]) 之后，x的值为 [5, 3, 1, 7, 9, 11]。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "x[:3] 是 [1,3,5]，reversed 后为 [5,3,1]，切片赋值后 x 变为 [5,3,1,7,9,11]。",
       knowledge_point: "第3章 Python序列结构"
     },
@@ -4613,7 +4613,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "假设random模块已导入，那么表达式random.sample(range(10), 20)的作用是生成20个不重复的整数。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "range(10) 只有10个元素，无法从中抽取20个不重复元素，会抛出 ValueError。",
       knowledge_point: "第3章 Python序列结构"
     },
@@ -4621,7 +4621,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "已知x和y是两个等长的整数列表，那么表达式sum((i*j for i, j in zip(x, y)))的作用是计算这两个列表所表示的向量的内积。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "zip 将对应元素配对，生成器计算乘积，sum 求和，即向量点积。",
       knowledge_point: "第3章 Python序列结构"
     },
@@ -4629,7 +4629,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "表达式(i**2 for i in range(100))的结果是个元组。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "这是生成器表达式，返回生成器对象，不是元组。",
       knowledge_point: "第3章 Python序列结构"
     },
@@ -4637,7 +4637,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "对于不可变类型的对象a，可以通过“a=b”修改a的值。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "赋值操作 a=b 是让 a 引用新对象 b，并非修改原对象内容，这在 Python 中是允许的。",
       knowledge_point: "第3章 Python序列结构"
     },
@@ -4645,7 +4645,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "已知“ls=[0,1,2,3,4,5,6,7,8,9]”，则“del ls[7:9]”与“ls[7:9]=[]”得到的ls中的元素相同。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "两种方式都删除索引7和8的元素，结果均为 [0,1,2,3,4,5,6,9]。",
       knowledge_point: "第3章 Python序列结构"
     },
@@ -4653,7 +4653,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "通过“ls.max()”可以得到列表ls中最大元素的值。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "列表没有 max() 方法，应使用内置函数 max(ls)。",
       knowledge_point: "第3章 Python序列结构"
     },
@@ -4661,7 +4661,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "列表的sort方法的key参数接收的函数必须有返回值。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "key 函数用于提供排序依据，必须返回一个可比较的值。",
       knowledge_point: "第3章 Python序列结构"
     },
@@ -4669,7 +4669,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "通过“max(t)”可以得到元组t中最大元素的值。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "max() 是内置函数，适用于所有可迭代对象，包括元组。",
       knowledge_point: "第3章 Python序列结构"
     },
@@ -4677,7 +4677,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "已知s={1,20,25}，则通过“s.add([2,3])”可以向s中添加一个新的列表类型的元素。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "列表是可变类型，不可哈希，不能作为集合元素。",
       knowledge_point: "第3章 Python序列结构"
     },
@@ -4685,7 +4685,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "已知s1和s2是两个集合，则“s1.issubset(s2)”与“s2.issuperset(s1)”返回结果必然相同。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "两者逻辑等价，均判断 s1 是否为 s2 的子集。",
       knowledge_point: "第3章 Python序列结构"
     },
@@ -4693,7 +4693,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "已知执行“d=dict(sno='1810100', name='李晓明', age=19)”，则执行“r=del d['age']”后，r的值为19。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "del 语句无返回值，不能赋值给 r；应使用 d.pop('age') 获取被删值。",
       knowledge_point: "第3章 Python序列结构"
     },
@@ -4701,7 +4701,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "如果字典a中包含可变类型的元素，则在用a给b赋值时，应使用copy模块的deepcopy函数，以使得a和b中各元素的取值具有完全的独立性。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "浅拷贝无法隔离嵌套可变对象，深拷贝才能确保完全独立。",
       knowledge_point: "第3章 Python序列结构"
     },
@@ -4709,7 +4709,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "已知d1和d2是两个字典对象，则直接执行“dMerge=dict(d1,**d2)”与先执行“dMerge=d1.copy()”、再执行“dMerge.update(d2)”的效果完全相同。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "两种方式都合并 d1 和 d2，且 d2 的键会覆盖 d1 中同名键，效果一致。",
       knowledge_point: "第3章 Python序列结构"
     },
@@ -4717,7 +4717,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "通过“d.keys()”可以获取由字典d中所有键组成的一个对象。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "keys() 返回 dict_keys 对象，包含所有键。",
       knowledge_point: "第3章 Python序列结构"
     },
@@ -4725,7 +4725,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "列表生成表达式的返回结果是一个列表。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "列表推导式 [...] 返回列表，而生成器表达式 (...) 返回生成器。",
       knowledge_point: "第3章 Python序列结构"
     },
@@ -4733,7 +4733,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "借助yield关键字可以利用函数实现生成器的功能。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "含 yield 的函数是生成器函数，调用后返回生成器对象。",
       knowledge_point: "第3章 Python序列结构"
     },
@@ -4741,7 +4741,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "利用iter函数可以根据可迭代对象获取迭代器。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "iter(obj) 返回 obj 的迭代器。",
       knowledge_point: "第3章 Python序列结构"
     },
@@ -4749,7 +4749,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "能够使用next函数获取下一个元素值的对象都是迭代器。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "真正的迭代器必须同时实现 __iter__ 和 __next__ 方法；仅有 __next__ 不足以成为迭代器。",
       knowledge_point: "第3章 Python序列结构"
     },
@@ -4973,7 +4973,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "已知 num = 34，那么表达式 num%7==0 and num%5!=0 的值为( )。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "34 % 7 = 6 ≠ 0，因此整个 and 表达式为 False。",
       knowledge_point: "第4章 选择结构与循环结构"
     },
@@ -4981,7 +4981,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "在Python中，关系运算符可以连续使用，例如1<3<5等价于1<3 and 3<5。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "Python 支持链式比较，1<3<5 等价于 (1<3) and (3<5)，结果为 True。",
       knowledge_point: "第4章 选择结构与循环结构"
     },
@@ -4989,7 +4989,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "表达式1<3<5等价于(1<3)<5，值为True。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "1<3<5 是链式比较，而 (1<3)<5 相当于 True<5，即 1<5 为 True，但两者逻辑不同，且题干说“等价”是错误的。",
       knowledge_point: "第4章 选择结构与循环结构"
     },
@@ -4997,7 +4997,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "在没有导入标准库math的情况下，语句x = 3 or math.sqrt(9)也可以正常执行，并且执行后x的值为3。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "or 运算符具有短路特性，3 为真，不会执行 math.sqrt(9)，因此即使未导入 math 也不会报错。",
       knowledge_point: "第4章 选择结构与循环结构"
     },
@@ -5005,7 +5005,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "列表[1,2,3]作为条件表达式时等价于True。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "非空列表在布尔上下文中为 True。",
       knowledge_point: "第4章 选择结构与循环结构"
     },
@@ -5013,7 +5013,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "在Python中，作为条件表达式时，[3]和{5}是等价的，都表示条件成立。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "非空列表和非空集合在布尔上下文中均为 True，因此条件成立。",
       knowledge_point: "第4章 选择结构与循环结构"
     },
@@ -5021,7 +5021,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "在没有导入标准库math的情况下，语句x = 3 and math.sqrt(9)也可以正常执行，并且执行后x的值为3。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "and 运算符会继续求值右侧，由于 math 未导入，执行 math.sqrt(9) 会抛出 NameError。",
       knowledge_point: "第4章 选择结构与循环结构"
     },
@@ -5029,7 +5029,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "在Python中，循环结构必须带有else子句。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "else 子句在循环中是可选的，不是必须的。",
       knowledge_point: "第4章 选择结构与循环结构"
     },
@@ -5037,7 +5037,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "如果仅仅是用于控制循环次数，那么使用for i in range(20)和for i in range(20, 40)的作用是等价的。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "两者都循环20次，若不使用 i 的值，则效果等价。",
       knowledge_point: "第4章 选择结构与循环结构"
     },
@@ -5045,7 +5045,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "在编写多层循环时，为了提高运行效率，应尽量减少内循环中不必要的计算。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "将不变的计算移到外层循环可显著提升性能。",
       knowledge_point: "第4章 选择结构与循环结构"
     },
@@ -5053,7 +5053,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "带有else子句的循环如果因为执行了break语句而退出的话，则会执行else子句中的代码。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "循环的 else 子句仅在**正常结束**（未被 break 中断）时执行。",
       knowledge_point: "第4章 选择结构与循环结构"
     },
@@ -5061,7 +5061,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "在条件表达式中不允许使用赋值运算符“=”，会提示语法错误。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "条件表达式中使用 = 会被解析为赋值，导致 SyntaxError；应使用 == 进行比较。",
       knowledge_point: "第4章 选择结构与循环结构"
     },
@@ -5069,7 +5069,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "当列表作为条件表达式时，空列表等价于False，包含任何内容的列表等价于True，所以表达式[3, 5, 8] == True的结果是True。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "[3,5,8] 在 if 中为 True，但 [3,5,8] == True 是值比较，列表不等于布尔值 True，结果为 False。",
       knowledge_point: "第4章 选择结构与循环结构"
     },
@@ -5077,7 +5077,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "选择结构必须带有else或elif子句。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "if 语句可以单独使用，无需 elif 或 else。",
       knowledge_point: "第4章 选择结构与循环结构"
     },
@@ -5085,7 +5085,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "在Python中，else只有选择结构这一种用法，在其他场合不允许使用else关键字。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "else 还可用于 for/while 循环和 try-except 结构中。",
       knowledge_point: "第4章 选择结构与循环结构"
     },
@@ -5093,7 +5093,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "只允许在循环结构中嵌套选择结构，不允许在选择结构中嵌套循环结构。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "Python 允许任意嵌套，包括在 if 中写 for/while 循环。",
       knowledge_point: "第4章 选择结构与循环结构"
     },
@@ -5101,7 +5101,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "关键字break和continue只能用于循环结构中，不能在循环结构之外使用。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "break 和 continue 是循环控制语句，只能在 for 或 while 循环体内使用。",
       knowledge_point: "第4章 选择结构与循环结构"
     },
@@ -5365,7 +5365,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "在Python中，使用关键字define定义函数。( )",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "Python 使用 def 定义函数，不是 define。",
       knowledge_point: "第5章 函数"
     },
@@ -5373,7 +5373,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "在Python中，使用关键字def定义函数。( )",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "正确，def 是定义函数的关键字。",
       knowledge_point: "第5章 函数"
     },
@@ -5381,7 +5381,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "定义函数时，即使该函数不需要接收任何参数，也必须保留一对空的圆括号来表示这是一个函数。( )",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "语法要求，def func(): 是合法的，def func 是错误的。",
       knowledge_point: "第5章 函数"
     },
@@ -5389,7 +5389,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "在Python中定义函数时必须说明每个参数的类型。( )",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "Python 是动态类型语言，参数类型可选（可通过类型注解添加，但非强制）。",
       knowledge_point: "第5章 函数"
     },
@@ -5397,7 +5397,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "编写函数时，一般建议先对参数进行合法性检查，然后再编写正常的功能代码。( )",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "良好的编程习惯，提高健壮性。",
       knowledge_point: "第5章 函数"
     },
@@ -5405,7 +5405,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "一个函数如果带有默认值参数，那么必须所有参数都设置默认值。( )",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "只需从右向左连续设置默认值，不要求全部参数都有默认值。",
       knowledge_point: "第5章 函数"
     },
@@ -5413,7 +5413,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "在调用函数时，把实参的引用传递给形参，也就是说，在函数体语句执行之前的瞬间，形参和实参是同一个对象。( )",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "Python 采用“传对象引用”，对于可变对象，修改会影响原对象。",
       knowledge_point: "第5章 函数"
     },
@@ -5421,7 +5421,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "在Python中，不能在一个函数的定义中再定义一个嵌套函数。( )",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "可以定义嵌套函数（闭包）。",
       knowledge_point: "第5章 函数"
     },
@@ -5429,7 +5429,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "已知函数定义 def demo(*p): pass，那么表达式 callable(demo) 的值为True。( )",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "demo 是函数对象，callable 返回 True。",
       knowledge_point: "第5章 函数"
     },
@@ -5437,7 +5437,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "在Python中，lambda表达式属于可调用对象。( )",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "lambda 创建匿名函数，是可调用的。",
       knowledge_point: "第5章 函数"
     },
@@ -5445,7 +5445,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "定义Python函数时必须指定函数返回值类型。( )",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "返回值类型是可选的类型注解，非强制。",
       knowledge_point: "第5章 函数"
     },
@@ -5453,7 +5453,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "定义Python函数时，如果函数中没有return语句，则默认返回空值None。( )",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "正确。",
       knowledge_point: "第5章 函数"
     },
@@ -5461,7 +5461,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "如果在函数中有语句 return 3，那么该函数一定会返回整数3。( )",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "如果该 return 语句未被执行（如在条件分支中未满足），则不会返回3。",
       knowledge_point: "第5章 函数"
     },
@@ -5469,7 +5469,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "自定义函数中必须包含return语句。( )",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "可省略 return，此时返回 None。",
       knowledge_point: "第5章 函数"
     },
@@ -5477,7 +5477,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "函数中的return语句一定能够得到执行。( )",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "若 return 在未执行的分支中，则不会运行。",
       knowledge_point: "第5章 函数"
     },
@@ -5485,7 +5485,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "不同作用域中的同名变量之间互相不影响，也就是说，在不同的作用域内可以定义同名的变量。( )",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "作用域隔离，局部变量不会影响全局同名变量。",
       knowledge_point: "第5章 函数"
     },
@@ -5493,7 +5493,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "全局变量会增加不同函数之间的隐式耦合度，从而降低代码可读性，因此应尽量避免过多使用全局变量。( )",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "良好实践建议减少全局变量使用。",
       knowledge_point: "第5章 函数"
     },
@@ -5501,7 +5501,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "函数内部定义的局部变量当函数调用结束后被自动删除。( )",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "局部变量生命周期限于函数调用期间。",
       knowledge_point: "第5章 函数"
     },
@@ -5509,7 +5509,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "在函数内部，既可以使用global来声明使用外部全局变量，也可以使用global直接定义全局变量。( )",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "global 可用于声明或创建全局变量。",
       knowledge_point: "第5章 函数"
     },
@@ -5517,7 +5517,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "在函数内部没有办法定义全局变量。( )",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "可通过 global 关键字在函数内定义全局变量。",
       knowledge_point: "第5章 函数"
     },
@@ -5525,7 +5525,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "如果函数B是在函数A里面定义的嵌套函数，那么在函数B中只能使用函数A或函数B中的形参和局部变量，无法使用全局变量。( )",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "嵌套函数可以访问全局变量（LEGB 规则）。",
       knowledge_point: "第5章 函数"
     },
@@ -5533,7 +5533,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "在函数内部直接为形参赋值不会影响外部实参的值。( )",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "重新赋值使形参指向新对象，不影响原实参（尤其对不可变对象）。",
       knowledge_point: "第5章 函数"
     },
@@ -5541,7 +5541,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "在函数内部没有任何办法可以影响实参的值。( )",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "对可变对象（如列表、字典），可通过方法修改其内容，影响实参。",
       knowledge_point: "第5章 函数"
     },
@@ -5549,7 +5549,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "调用带有默认值参数的函数时，不能为默认值参数传递任何值，必须使用函数定义时设置的默认值。( )",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "可以显式传参覆盖默认值。",
       knowledge_point: "第5章 函数"
     },
@@ -5557,7 +5557,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "在同一个作用域内，局部变量会隐藏同名的全局变量。( )",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "局部变量优先级高于全局变量。",
       knowledge_point: "第5章 函数"
     },
@@ -5565,7 +5565,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "在函数中，如果要使用函数外定义的全局变量需要用关键字global进行声明，如果要定义局部变量需要使用关键字local进行声明。( )",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "Python 没有 local 关键字；局部变量无需声明，默认即局部。",
       knowledge_point: "第5章 函数"
     },
@@ -5573,7 +5573,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "形参可以看做是函数内部的局部变量，函数运行结束之后形参就不可访问了。( )",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "形参属于局部作用域，函数结束后销毁。",
       knowledge_point: "第5章 函数"
     },
@@ -5581,7 +5581,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "假设已导入random标准库，那么表达式 max([random.randint(1, 10) for i in range(10)]) 的值一定是10。( )",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "randint(1,10) 可能不生成10，max 不一定是10。",
       knowledge_point: "第5章 函数"
     },
@@ -5589,7 +5589,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "Python标准库random的函数randint(m,n)用来生成一个[m,n]区间上的随机整数。( )",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "randint 是闭区间，包含 m 和 n。",
       knowledge_point: "第5章 函数"
     },
@@ -5597,7 +5597,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "Python标准库random的函数randint(m,n)用来生成一个[m,n)区间上的随机整数。( )",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "这是 randrange 的行为，randint 是闭区间。",
       knowledge_point: "第5章 函数"
     },
@@ -5605,7 +5605,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "在函数内部没有任何声明的情况下直接为某个变量赋值，这个变量一定是函数内部的局部变量。( )",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "Python 默认赋值创建局部变量，除非用 global 或 nonlocal 声明。",
       knowledge_point: "第5章 函数"
     },
@@ -5613,7 +5613,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "在Python中定义函数时不需要声明函数参数的类型。( )",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "类型注解是可选的。",
       knowledge_point: "第5章 函数"
     },
@@ -5621,7 +5621,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "在调用函数时，可以通过关键参数的形式进行传值，从而避免必须记住函数形参顺序的麻烦。( )",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "关键字参数允许按名称传参，顺序自由。",
       knowledge_point: "第5章 函数"
     },
@@ -5629,7 +5629,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "在定义函数时，某个参数名字前面带有一个*符号表示可变长度参数，可以接收任意多个普通位置实参并存放于一个元组之中。( )",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "正确，*args 收集位置参数为元组。",
       knowledge_point: "第5章 函数"
     },
@@ -5637,7 +5637,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "在定义函数时，某个参数名字前面带有两个*符号表示可变长度参数，可以接收任意多个关键参数并将其存放于一个字典之中。( )",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "**kwargs 收集关键字参数为字典。",
       knowledge_point: "第5章 函数"
     },
@@ -5645,7 +5645,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "定义函数时，带有默认值的参数必须出现在参数列表的最右端，任何一个带有默认值的参数右边不允许出现没有默认值的普通位置参数。( )",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "这是 Python 语法要求，否则会报错。",
       knowledge_point: "第5章 函数"
     },
@@ -5773,7 +5773,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "在实例成员方法中不可以访问属于类的数据成员。( )",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "实例方法可以通过 self.__class__ 或直接通过类名访问类变量（类数据成员）。",
       knowledge_point: "第6章 面向对象程序设计"
     },
@@ -5781,7 +5781,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "在类方法中不可以访问属于实例的数据成员。( )",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "类方法只有 cls 参数，没有实例引用，无法访问实例属性（除非传入实例对象）。",
       knowledge_point: "第6章 面向对象程序设计"
     },
@@ -5789,7 +5789,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "在静态方法中不可以访问属于实例的数据成员。( )",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "静态方法无 self 或 cls 参数，无法直接访问实例或类成员。",
       knowledge_point: "第6章 面向对象程序设计"
     },
@@ -5797,7 +5797,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "如果在自定义类中实现了特殊方法__call__()，那么这个类的所有对象都是可调用对象，可以像调用函数一样使用该类的对象。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "实现 __call__ 后，obj() 等价于 obj.__call__()，对象变为可调用。",
       knowledge_point: "第6章 面向对象程序设计"
     },
@@ -5805,7 +5805,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "在基类中使用双下画线开始且不以双下画线结束的成员属于私有成员，无法被派生类继承。( )",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "双下划线成员会进行名称改写（如 _Base__x），派生类无法直接访问，视为“私有”，不被继承。",
       knowledge_point: "第6章 面向对象程序设计"
     },
@@ -5813,7 +5813,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "在Python中定义类时，如果某个成员名称前有2个下画线则表示是私有成员。( )",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "必须是以两个下划线开头 **且不以两个下划线结尾** 才是私有成员。如 __init__ 是特殊方法，不是私有。",
       knowledge_point: "第6章 面向对象程序设计"
     },
@@ -5821,7 +5821,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "在类定义的外部没有任何办法可以访问对象的私有成员。( )",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "可通过改写后的名称访问，如 obj._ClassName__private_var，并非完全不可访问。",
       knowledge_point: "第6章 面向对象程序设计"
     },
@@ -5829,7 +5829,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "Python中一切内容都可以称为对象。( )",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "Python 是纯面向对象语言，整数、字符串、函数、模块等都是对象。",
       knowledge_point: "第6章 面向对象程序设计"
     },
@@ -5837,7 +5837,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "栈和队列的都具有先入后出的特点。( )",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "栈是“后进先出”（LIFO），队列是“先进先出”（FIFO），两者不同。",
       knowledge_point: "第6章 面向对象程序设计"
     },
@@ -5845,7 +5845,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "如果在派生类中没有定义构造方法，会自动继承基类的构造方法，使用派生类定义对象时自动调用基类的构造方法。( )",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "若子类未定义 __init__，创建子类对象时会调用父类的 __init__。",
       knowledge_point: "第6章 面向对象程序设计"
     },
@@ -5853,7 +5853,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "如果在派生类中定义了构造方法，使用派生类定义对象时不会自动调用基类的构造方法。( )",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "子类定义了 __init__ 后，需显式调用 super().__init__() 才能执行父类初始化。",
       knowledge_point: "第6章 面向对象程序设计"
     },
@@ -5861,7 +5861,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "在一个软件的设计与开发中，所有类名、函数名、变量名都应该遵循统一的风格和规范。( )",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "良好的编码规范（如 PEP8）要求命名风格统一，提高可读性和可维护性。",
       knowledge_point: "第6章 面向对象程序设计"
     },
@@ -5869,7 +5869,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "定义类时所有实例方法的第一个参数用来表示对象本身，在类的外部通过对象名来调用实例方法时不需要为该参数传值。( )",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "调用 obj.method() 时，Python 自动将 obj 作为第一个参数传入（即 self）。",
       knowledge_point: "第6章 面向对象程序设计"
     },
@@ -5877,7 +5877,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "表达式 str.upper('abcd') == 'abcd'.upper() 的结果为True。( )",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "str.upper('abcd') 是通过类调用方法，需传入字符串；'abcd'.upper() 是通过实例调用。两者结果均为 'ABCD'，相等。",
       knowledge_point: "第6章 面向对象程序设计"
     },
@@ -5885,7 +5885,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "在面向对象程序设计中，函数和方法是完全一样的，都必须为所有参数进行传值。( )",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "方法是绑定到对象的函数，调用时自动传入 self，而普通函数需手动传所有参数。",
       knowledge_point: "第6章 面向对象程序设计"
     },
@@ -5893,7 +5893,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "Python支持多继承，如果父类中有相同的方法名，而在子类中调用时没有指定父类名，则Python解释器将从左向右按顺序进行搜索并使用第一个符合条件的方法。( )",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "Python 使用 C3 线性化算法确定方法解析顺序（MRO），通常表现为从左到右查找。",
       knowledge_point: "第6章 面向对象程序设计"
     },
@@ -5901,7 +5901,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "在Python中定义类时实例方法的第一个参数名称必须是self。( )",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "参数名可以是任意合法标识符（如 this、me），但约定俗成使用 self。",
       knowledge_point: "第6章 面向对象程序设计"
     },
@@ -5909,7 +5909,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "在Python中定义类时实例方法的第一个参数名称不管是什么，都表示对象自身。( )",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "无论命名为何，第一个参数在调用时都会自动接收实例对象的引用。",
       knowledge_point: "第6章 面向对象程序设计"
     },
@@ -5917,7 +5917,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "以两个下划线开头和结束的特殊成员名字以及与运算符或函数的对应关系是Python语言预定义的，自定义类中只能进行重写和覆盖，不能自由增加新的特殊成员和运算符的对应关系。( )",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "如 __add__、__len__ 等是语言内置的协议，用户不能自定义新的运算符（如 **= 新符号）。",
       knowledge_point: "第6章 面向对象程序设计"
     },
@@ -5925,7 +5925,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "以两个下划线开头和结束的特殊方法一般不建议直接调用，而是使用指定运算符或函数时自动调用这些特殊方法。( )",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "应使用 len(obj) 而非 obj.__len__()，以保持代码可读性和一致性。",
       knowledge_point: "第6章 面向对象程序设计"
     },
@@ -6013,7 +6013,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "在Python中，任意长的字符串都遵守驻留机制，例如对于任意字符串s，执行 x = s * 5000 和 y = s * 5000 之后，表达式 x is y 的值为True。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "Python 仅对部分短字符串和标识符进行驻留（interning），长字符串或动态生成的字符串通常不驻留，x is y 为 False。",
       knowledge_point: "第7章 字符串"
     },
@@ -6021,7 +6021,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "Python运算符%不仅可以用来求余数，还可以用来格式化字符串，但后一种用法已经不推荐使用了。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "% 格式化（如 '%s' % name）已被 str.format() 和 f-string 取代，官方建议避免使用。",
       knowledge_point: "第7章 字符串"
     },
@@ -6029,7 +6029,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "相同内容的字符串使用不同的编码格式进行编码得到的结果可能会不一样。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "例如 '中' 用 UTF-8 编码为 b'\\xe4\\xb8\\xad'，用 GBK 编码为 b'\\xd6\\xd0'，结果不同。",
       knowledge_point: "第7章 字符串"
     },
@@ -6037,7 +6037,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "如果需要连接大量字符串成为一个字符串，那么使用字符串对象的join()方法比运算符+具有更高的效率",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "字符串是不可变对象，用 + 连接会创建多个中间对象；join() 一次性分配内存，效率更高。",
       knowledge_point: "第7章 字符串"
     },
@@ -6045,7 +6045,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "Python字符串方法replace()对字符串进行原地修改，没有返回值",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "字符串不可变，replace() 返回新字符串，原字符串不变。",
       knowledge_point: "第7章 字符串"
     },
@@ -6053,7 +6053,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "Python字符串方法replace()返回替换后的新字符串，不对原字符串做任何修改",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "正确。所有字符串方法都不修改原字符串，而是返回新对象。",
       knowledge_point: "第7章 字符串"
     },
@@ -6061,7 +6061,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "已知x为非空字符串，那么表达式 ''.join(x.split()) == x 的值一定为True。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "x.split() 默认按空白分割并去除所有空格，再 join 会丢失原有空格。如 x='a b' → split→['a','b']→join→'ab' ≠ 'a b'。",
       knowledge_point: "第7章 字符串"
     },
@@ -6069,7 +6069,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "已知x为非空字符串，那么表达式 ','.join(x.split(',')) == x 的值一定为True",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "按逗号分割后再用逗号连接，结果与原字符串相同（即使末尾有逗号，split 会保留空元素）。",
       knowledge_point: "第7章 字符串"
     },
@@ -6077,7 +6077,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "已知 x = 'abcddcefag'，那么表达式  ''.join(sorted(set(x), key=x.rindex)) 的值为'bdcefag'。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "set(x) 去重得 {'a','b','c','d','e','f','g'}，按每个字符在 x 中最后一次出现的位置排序（rindex），顺序为 b(1), d(4), c(5), e(6), f(7), a(8), g(9) → 'bdcefag'。",
       knowledge_point: "第7章 字符串"
     },
@@ -6085,7 +6085,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "已知 x = 'abcddcefag'，那么表达式 ''.join(sorted(set(x), key=x.index))的值为'abcdefg'。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "按每个字符首次出现位置排序：a(0), b(1), c(2), d(3), e(6), f(7), g(9) → 'abcdefg'。",
       knowledge_point: "第7章 字符串"
     },
@@ -6093,7 +6093,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "Python 3.x中字符串对象的encode()方法只能使用默认的UTF-8编码方式把当前字符串转换为字节串，不支持其他编码格式。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "encode() 支持多种编码，如 encode('gbk')、encode('utf-16') 等。",
       knowledge_point: "第7章 字符串"
     },
@@ -6101,7 +6101,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "表达式 'Python小屋'.encode().decode('gbk')  的值为 'Python小屋'。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "encode() 默认用 UTF-8 编码，再用 GBK 解码会导致乱码或 UnicodeDecodeError，结果不是原字符串。",
       knowledge_point: "第7章 字符串"
     },
@@ -6109,7 +6109,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "表达式'Python小屋'.encode().decode('utf8') 的值为 'Python小屋'。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "encode() 默认 UTF-8，再用 UTF-8 decode，可正确还原原字符串。",
       knowledge_point: "第7章 字符串"
     },
@@ -6117,7 +6117,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "表达式'Python_dfg'.encode().decode('gbk') 的值为 'Python_dfg'。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "该字符串只含 ASCII 字符，UTF-8 和 GBK 对 ASCII 编码一致，因此 decode('gbk') 能正确还原。",
       knowledge_point: "第7章 字符串"
     },
@@ -6125,7 +6125,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "表达式  'Python_dfg'.encode().decode('utf8') 的值为 'Python_dfg'。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "同上，ASCII 字符在 UTF-8 下编码/解码无损。",
       knowledge_point: "第7章 字符串"
     },
@@ -6133,7 +6133,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "已知x和y是两个字符串，那么表达式sum((1 for i,j in zip(x,y) if i==j))可以用来计算两个字符串中对应位置字符相等的个数。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "zip 遍历对应位置字符，生成器表达式统计相等的对数，sum 求和，逻辑正确。",
       knowledge_point: "第7章 字符串"
     },
@@ -6141,7 +6141,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "已知x和y是两个字符串，且已导入标准库operator中的eq函数，那么表达式 sum(map(eq, x, y)) 可以用来计算两个字符串中对应位置字符相等的个数。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "operator.eq(a,b) 等价于 a==b，map 将其应用到每对字符，True 视为1，False 为0，sum 得总数。",
       knowledge_point: "第7章 字符串"
     },
@@ -6149,7 +6149,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "Python 3.x中字符串对象的encode()方法默认使用utf8作为编码方式。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "正确。str.encode() 默认 encoding='utf-8'。",
       knowledge_point: "第7章 字符串"
     },
@@ -6157,7 +6157,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "已知x = 'Python是一种非常好的编程语言'.encode()，那么表达式x.decode('gbk')的值为'Python是一种非常好的编程语言'。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "x 是 UTF-8 编码的字节串，用 GBK 解码会出错或乱码，无法还原原字符串。",
       knowledge_point: "第7章 字符串"
     },
@@ -6165,7 +6165,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "已知x = 'hellow world.'.encode()，那么表达式x.decode('gbk')的值为'hellow world.'。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "字符串全为 ASCII，UTF-8 与 GBK 编码相同，因此可用 GBK 正确解码。",
       knowledge_point: "第7章 字符串"
     },
@@ -6333,7 +6333,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "正则表达式模块re的match()函数是从字符串的开始匹配特定模式，而search()函数是在整个字符串中寻找模式，这两个函数如果匹配成功则返回Match对象，匹配失败则返回空值None。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "正确。match() 只从开头匹配，search() 扫描全文；成功返回 re.Match 对象，失败返回 None。",
       knowledge_point: "第8章 正则表达式"
     },
@@ -6341,7 +6341,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "使用正则表达式对字符串进行分割时，可以指定多个分隔符，而字符串对象的split()方法无法做到这一点。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "例如 re.split('[,;\\s]+', s) 可同时按逗号、分号、空格分割，而 str.split() 只能用固定字符串分割。",
       knowledge_point: "第8章 正则表达式"
     },
@@ -6349,7 +6349,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "正则表达式元字符'^'一般用来表示从字符串开始处进行匹配，用在一对方括号中的时候则表示反向匹配，不匹配方括号中的字符。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "在模式开头，^ 表示行首；在 [...] 中，如 [^abc] 表示“非a、b、c”的字符。",
       knowledge_point: "第8章 正则表达式"
     },
@@ -6357,7 +6357,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "正则表达式元字符'\\s'用来匹配单个任意空白字符。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "\\s 匹配空格、制表符、换行等空白字符，且只匹配一个。",
       knowledge_point: "第8章 正则表达式"
     },
@@ -6365,7 +6365,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "正则表达式元字符'\\d'用来匹配单个任意数字字符。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "\\d 等价于 [0-9]，匹配单个数字字符。",
       knowledge_point: "第8章 正则表达式"
     },
@@ -6373,7 +6373,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "正则表达式元字符'\\w'可以匹配单个字母、数字或下划线。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "\\w 等价于 [a-zA-Z0-9_]，匹配单词字符（不含中文等）。",
       knowledge_point: "第8章 正则表达式"
     },
@@ -6381,7 +6381,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "正则表达式'[a-z]'可以匹配单个小写字母。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "正确。[a-z] 表示 a 到 z 之间的任意一个小写字母。",
       knowledge_point: "第8章 正则表达式"
     },
@@ -6389,7 +6389,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "正则表达式'[^a-z]'可以匹配单个小写字母。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "[^a-z] 表示“非小写字母”，不能匹配小写字母，只能匹配其他字符（如大写、数字、符号等）。",
       knowledge_point: "第8章 正则表达式"
     },
@@ -6397,7 +6397,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "正则表达式'[a-z]'只能匹配小写字母a、小写字母z和减号，不能匹配其他字符。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "错误。在方括号内，a-z 表示范围，匹配所有小写字母，不是字面量 'a'、'-'、'z'。",
       knowledge_point: "第8章 正则表达式"
     },
@@ -6405,7 +6405,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "假设re模块已成功导入，并且有 pattern = re.compile('^'+'\\.'.join([r'\\d{1,3}' for i in range(4)])+'$')，那么表达式 pattern.match('192.168.1.103') 的值为None。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "pattern 构建的是 '^\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}$'，用于匹配IPv4格式。'192.168.1.103' 符合该模式，match 成功，返回 Match 对象，不是 None。",
       knowledge_point: "第8章 正则表达式"
     },
@@ -6573,7 +6573,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "假设当前文件夹中包含非空文件 test.dat，那么先后执行语句 fp = open('test.dat', 'rb')、print(fp.read(5))、fp.seek(0)、print(fp.read(5))，连续两次输出的内容是一样的。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "seek(0) 将文件指针重置到开头，再次 read(5) 读取前5字节，结果相同。",
       knowledge_point: "第9章 文件与文件夹操作"
     },
@@ -6581,7 +6581,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "使用内置函数open()且以'w'模式打开的文件，文件指针默认指向文件尾。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "'w' 模式会清空文件内容，指针位于文件开头（位置0）。",
       knowledge_point: "第9章 文件与文件夹操作"
     },
@@ -6589,7 +6589,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "假设已导入标准库struct，那么使用语句 struct.pack('i', x) 可以把任意整数x序列化为字节串。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "'i' 表示4字节有符号整数，范围为 -2147483648 到 2147483647，超出会报错。",
       knowledge_point: "第9章 文件与文件夹操作"
     },
@@ -6597,7 +6597,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "使用内置函数open()且以'ab'模式打开的文件，文件指针默认指向文件尾。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "'a' 或 'ab' 模式总是将指针定位到文件末尾，确保追加写入。",
       knowledge_point: "第9章 文件与文件夹操作"
     },
@@ -6605,7 +6605,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "使用内置函数open()打开文件时，只要文件路径正确就总是可以正确打开的。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "还可能因权限不足、文件被占用、磁盘满等原因失败。",
       knowledge_point: "第9章 文件与文件夹操作"
     },
@@ -6613,7 +6613,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "使用print()函数无法将信息写入文件，只能输出到屏幕上。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "print(..., file=fp) 可将输出重定向到文件对象 fp。",
       knowledge_point: "第9章 文件与文件夹操作"
     },
@@ -6621,7 +6621,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "对文件进行读写操作之后必须使用flush()方法把缓冲区的内容写入硬盘或者调用close()方法关闭文件以确保所有内容都得到保存。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "若不 flush 或 close，缓冲区数据可能未写入磁盘，程序崩溃会导致数据丢失。",
       knowledge_point: "第9章 文件与文件夹操作"
     },
@@ -6629,7 +6629,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "内置函数open()使用'w'模式打开的文件，不仅可以往文件中写入内容，也可以从文件中读取内容。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "'w' 模式只支持写入。若需读写，应使用 'w+'（但会清空原内容）或 'r+'（保留原内容）。",
       knowledge_point: "第9章 文件与文件夹操作"
     },
@@ -6637,7 +6637,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "读写文件时，只要程序中调用了文件对象的close()方法，就一定可以保证文件被正确关闭。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "若在 close() 前发生异常导致程序终止，或系统崩溃，仍可能未真正关闭。推荐使用 with 语句。",
       knowledge_point: "第9章 文件与文件夹操作"
     },
@@ -6645,7 +6645,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "文件对象的seek()方法定位的单位是字节，即使是使用'r'或'w'模块打开的文本文件也是一样的。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "seek() 的 offset 参数始终以字节为单位，即使在文本模式下（但文本模式中 seek 可能受限于编码）。",
       knowledge_point: "第9章 文件与文件夹操作"
     },
@@ -6653,7 +6653,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "docx格式的文档把扩展名改为zip之后，在资源管理器中就无法打开了，提示文件损坏。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: ".docx 本质是 ZIP 压缩包，改名为 .zip 后可用解压软件正常打开。",
       knowledge_point: "第9章 文件与文件夹操作"
     },
@@ -6661,7 +6661,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "使用扩展库openpyxl的函数Workbook()创建新工作簿时，默认情况下是完全空白的，里面没有工作表，必须自己使用工作簿对象的create_sheet()方法创建工作表才能写入数据。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "Workbook() 默认会创建一个名为 'Sheet' 的工作表，可通过 wb.active 访问。",
       knowledge_point: "第9章 文件与文件夹操作"
     },
@@ -6669,7 +6669,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "内置函数open()以'r'模式打开的文本文件对象是可遍历的，可以使用for循环遍历文件中每行文本。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "正确。for line in open('file.txt') 是常见且高效的逐行读取方式。",
       knowledge_point: "第9章 文件与文件夹操作"
     },
@@ -6677,7 +6677,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "视频文件属于二进制文件。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "视频文件（如 .mp4、.avi）包含非文本的二进制数据，属于二进制文件。",
       knowledge_point: "第9章 文件与文件夹操作"
     },
@@ -6685,7 +6685,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "扩展命为.py和.pyw的Python程序文件属于文本文件。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: ".py 和 .pyw 是纯文本格式的源代码文件，可用文本编辑器查看和编辑。",
       knowledge_point: "第9章 文件与文件夹操作"
     },
@@ -6693,7 +6693,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "扩展名为.pyd的文件属于二进制文件。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: ".pyd 是 Windows 下的动态链接库（DLL），用于 C 扩展模块，是编译后的二进制文件。",
       knowledge_point: "第9章 文件与文件夹操作"
     },
@@ -6701,7 +6701,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "Python的主程序文件python.exe属于二进制文件。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: ".exe 是可执行程序，属于二进制文件。",
       knowledge_point: "第9章 文件与文件夹操作"
     },
@@ -6709,7 +6709,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "对字符串信息进行编码以后，必须使用同样的或者兼容的编码格式进行解码才能还原本来的信息。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "例如 UTF-8 编码的字节串用 GBK 解码会产生乱码或错误。",
       knowledge_point: "第9章 文件与文件夹操作"
     },
@@ -6717,7 +6717,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "使用pickle进行序列化得到的二进制文件使用struct也可以正确地进行反序列化。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "pickle 和 struct 是完全不同的序列化机制。pickle 支持复杂对象，struct 仅处理基本 C 类型，不能互换。",
       knowledge_point: "第9章 文件与文件夹操作"
     },
@@ -6725,7 +6725,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "使用内置函数open()以二进制模块打开文件时，也可以使用参数encoding指定编码格式。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "二进制模式（如 'rb'、'wb'）不接受 encoding 参数，因为不涉及文本解码/编码。",
       knowledge_point: "第9章 文件与文件夹操作"
     },
@@ -6861,7 +6861,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "试图计算表达式 1/0 时会抛出 ZeroDivisionError 类型的异常。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "正确。整数或浮点数除以零会引发 ZeroDivisionError。",
       knowledge_point: "第10章 异常处理结构"
     },
@@ -6869,7 +6869,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "试图计算表达式 '2' + 1 时会抛出 TypeError 类型的异常。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "字符串和整数不能直接相加，类型不兼容，抛出 TypeError。",
       knowledge_point: "第10章 异常处理结构"
     },
@@ -6877,7 +6877,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "试图计算表达式 int('3.14') 时会抛出 ValueError 类型的异常。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "int() 不能直接转换包含小数点的字符串，需先转 float 再转 int，否则抛出 ValueError。",
       knowledge_point: "第10章 异常处理结构"
     },
@@ -6885,7 +6885,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "使用异常处理结构时，except Exception: 子句可以捕捉键盘中断异常KeyboardInterrupt。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "KeyboardInterrupt 继承自 BaseException，而非 Exception，因此 except Exception: 无法捕获它。",
       knowledge_point: "第10章 异常处理结构"
     },
@@ -6893,7 +6893,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "使用异常处理结构时，空的except: 子句可以捕捉键盘中断异常KeyboardInterrupt。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "空的 except: 会捕获所有 BaseException 的子类（包括 KeyboardInterrupt 和 SystemExit），但一般不推荐这样做。",
       knowledge_point: "第10章 异常处理结构"
     },
@@ -6901,7 +6901,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "如果当前作用域中不存在变量x，那么执行语句 print(x) 时一定会抛出 NameError 类型的异常并提示变量名x还没有定义。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "不一定。如果 x 在全局或内置作用域中存在，则不会报错。只有在所有作用域都找不到 x 时才抛出 NameError。",
       knowledge_point: "第10章 异常处理结构"
     },
@@ -6909,7 +6909,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "在16GB内存的计算机上64位Python环境中试图执行语句 x = [0] * 9999999999999999999999999999999999999999999999999 时会抛出 OverflowError 类型的异常并提示数值超出有效下标范围。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "乘数过大超出了 Python 整数或列表长度的内部限制（如 ssize_t 最大值），会引发 OverflowError。",
       knowledge_point: "第10章 异常处理结构"
     },
@@ -6917,7 +6917,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "使用内置函数open()打开文件时，如果指定的文件路径错误，代码会抛出 FileNotFoundError 类型的异常。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "当文件不存在且以读模式打开时，open() 会抛出 FileNotFoundError（是 OSError 的子类）。",
       knowledge_point: "第10章 异常处理结构"
     },
@@ -6925,7 +6925,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "在16GB内存的计算机上64位Python环境中试图执行语句 x = [0] * 1844674407370955161 时会抛出 MemoryError 类型的异常表示内存不足。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "该列表所需内存远超物理内存，系统无法分配，会抛出 MemoryError。",
       knowledge_point: "第10章 异常处理结构"
     },
@@ -6933,7 +6933,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "试图计算表达式 'Python_xiaowu'.encode().decode('gbk') 时会抛出 UnicodeDecodeError 异常并提示无法节码。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "'Python_xiaowu' 只包含 ASCII 字符，UTF-8 编码后与 GBK 兼容，decode('gbk') 不会出错。",
       knowledge_point: "第10章 异常处理结构"
     },
@@ -6941,7 +6941,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "已知 x = []，那么试图执行语句 x.pop() 时会抛出 IndexError 类型的异常。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "对空列表调用 pop() 会因无元素可弹出而抛出 IndexError。",
       knowledge_point: "第10章 异常处理结构"
     },
@@ -6949,7 +6949,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "已知 x = {}，那么试图执行语句 print(x['a']) 时会抛出 KeyError 类型的异常。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "字典中不存在键 'a'，访问会抛出 KeyError。",
       knowledge_point: "第10章 异常处理结构"
     },
@@ -6957,7 +6957,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "在try...except...else结构中，如果try块的语句引发了异常则会执行else块中的代码。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "else 块仅在 try 块未引发任何异常时执行。若有异常，即使被 except 捕获，else 也不会执行。",
       knowledge_point: "第10章 异常处理结构"
     },
@@ -6965,7 +6965,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "一般不建议在try中放太多代码，而是应该只放入可能会引发异常的代码。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "这样可以精确定位异常来源，避免掩盖其他潜在 bug，提高代码可读性和健壮性。",
       knowledge_point: "第10章 异常处理结构"
     },
@@ -6973,7 +6973,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "一旦代码抛出异常并且没有得到正确的处理，整个程序会崩溃，并且不会继续执行后面的代码。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "未被捕获的异常会向上传播直至顶层，导致解释器打印 traceback 并终止程序。",
       knowledge_point: "第10章 异常处理结构"
     },
@@ -7037,7 +7037,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "解释是将源代码全部翻译成机器指令，再加上一些描述信息，生成可执行文件。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "这是对“编译”的描述。解释是逐行读取、翻译并执行源代码，不生成独立的可执行文件。",
       knowledge_point: "第1章 Python概述"
     },
@@ -7045,7 +7045,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "Python程序中每条语句以分号结尾。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "Python 使用换行符表示语句结束，一般不需要分号。只有在同一行写多条语句时才用分号分隔。",
       knowledge_point: "第1章 Python概述"
     },
@@ -7053,7 +7053,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "程序执行时遇到断点就暂停执行，并且可以查看当前各变量的状态。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "在调试模式下（如使用 IDLE 或 PyCharm 的调试器），程序运行到断点会暂停，允许检查变量值、调用栈等信息。",
       knowledge_point: "第1章 Python概述"
     },
@@ -7146,7 +7146,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "已知 s=\"学习\"，则执行 s[0]='复' 后 s 中存储的字符串被修改为“复习”。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "Python 中字符串是不可变对象，不能通过下标赋值修改。执行 s[0]='复' 会抛出 TypeError。",
       knowledge_point: "第2章 Python语言基础"
     },
@@ -7154,7 +7154,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "通过下标“[]”不仅可以访问元组中的某个元素，还可以对元素进行修改。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "元组是不可变序列，只能通过下标读取元素，不能修改。尝试赋值会引发 TypeError。",
       knowledge_point: "第2章 Python语言基础"
     },
@@ -7162,7 +7162,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "执行“print('%.2f%%'% 52.50)”，输出结果为“52.50%”。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "格式化字符串中，%% 表示输出一个百分号 %，%.2f 保留两位小数，因此输出为 '52.50%'。",
       knowledge_point: "第2章 Python语言基础"
     },
@@ -7170,7 +7170,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "二进制数转十进制数的规则是“按权展开求和”。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "正确。例如二进制 101 = 1×2² + 0×2¹ + 1×2⁰ = 5，即按权展开后求和。",
       knowledge_point: "第2章 Python语言基础"
     },
@@ -7178,7 +7178,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "print(list(range(5)))的输出结果为“[0, 1, 2, 3, 4] ”。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "range(5) 生成 0 到 4 的整数序列，list() 将其转为列表 [0, 1, 2, 3, 4]，print 输出该列表。",
       knowledge_point: "第2章 Python语言基础"
     },
@@ -7284,7 +7284,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "通过“min(ls)”可以得到列表ls中最小元素的值。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "正确。min() 函数返回可迭代对象中的最小元素（要求元素可比较）。",
       knowledge_point: "第3章 Python序列结构与字典集合"
     },
@@ -7292,7 +7292,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "已知“t=(True)”，则t是一个元组。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "t=(True) 等价于 t=True，只是一个布尔值。要创建单元素元组，需写成 t=(True,)（注意逗号）。",
       knowledge_point: "第3章 Python序列结构与字典集合"
     },
@@ -7300,7 +7300,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "已知s1和s2是两个集合，则执行“s1.union(s2)”后，s1中的元素是原来s1和s2两个集合中的元素的并集。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "union() 返回新集合，不修改原集合 s1。若要更新 s1，应使用 s1.update(s2) 或 s1 |= s2。",
       knowledge_point: "第3章 Python序列结构与字典集合"
     },
@@ -7308,7 +7308,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "能够使用next函数获取下一个元素值的对象都是迭代器。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "正确。迭代器的定义就是实现了 __next__() 方法的对象，因此能被 next() 调用。",
       knowledge_point: "第3章 Python序列结构与字典集合"
     },
@@ -7401,7 +7401,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "通过“min(ls)”可以得到列表ls中最小元素的值。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "正确。min() 函数返回可迭代对象中的最小元素（要求元素可比较）。",
       knowledge_point: "第4章 程序流程控制"
     },
@@ -7409,7 +7409,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "伪代码必须符合Python语言的语法要求。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "伪代码是用自然语言或类编程语言描述算法逻辑，不依赖具体语法，目的是便于理解，不要求符合任何语言的语法规则。",
       knowledge_point: "第4章 程序流程控制"
     },
@@ -7417,7 +7417,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "print(list(range(5)))的输出结果为“[0, 1, 2, 3, 4] ”。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "range(5) 生成 0 到 4 的整数序列，list() 将其转为列表 [0, 1, 2, 3, 4]，print 输出该列表。",
       knowledge_point: "第4章 程序流程控制"
     },
@@ -7425,7 +7425,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "已知t=(5,10,15)，则list(range(len(t)))的输出结果是[1, 2, 3]。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "len(t)=3，range(3) 生成 0,1,2，因此 list(range(len(t))) = [0, 1, 2]，不是 [1,2,3]。",
       knowledge_point: "第4章 程序流程控制"
     },
@@ -7579,7 +7579,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "Python中的函数定义通过define关键字完成。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "Python 使用 def 关键字定义函数，不是 define。",
       knowledge_point: "第5章 函数与模块"
     },
@@ -7587,7 +7587,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "对于没有默认参数值的形参，在函数调用时必须为其指定实参。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "正确。无默认值的形参是必填参数，调用时必须提供对应实参。",
       knowledge_point: "第5章 函数与模块"
     },
@@ -7595,7 +7595,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "对于一个带不定长参数的函数，其普通形参可以有默认参数值。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "可以。例如 def f(a=1, *args): 是合法的，但注意带默认值的参数必须在 *args 之前。",
       knowledge_point: "第5章 函数与模块"
     },
@@ -7603,7 +7603,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "字典拆分出来的结果是作为关键字参数。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "使用 **dict 调用函数时，字典的键值对会被作为关键字参数传递，如 func(**{'x':1}) 等价于 func(x=1)。",
       knowledge_point: "第5章 函数与模块"
     },
@@ -7611,7 +7611,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "如果在一个函数中没有显式地写return语句，则该函数有一个隐式的什么数据都不返回的return语句。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "正确。Python 函数若无 return，默认返回 None。",
       knowledge_point: "第5章 函数与模块"
     },
@@ -7619,7 +7619,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "通过import语句一次只能导入一个模块。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "错误。可以一次导入多个模块，如 import os, sys, math。",
       knowledge_point: "第5章 函数与模块"
     },
@@ -7627,7 +7627,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "每个模块中都有一个全局变量__name__。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "正确。__name__ 是 Python 模块的内置属性，用于标识模块名称或是否为主程序。",
       knowledge_point: "第5章 函数与模块"
     },
@@ -7635,7 +7635,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "已知M模块中有两个函数f1和f2，则在脚本文件N.py中通过“from M import *”必然可以将M模块中的f1和f2导入。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "不一定。如果 M 模块定义了 __all__ 列表，则 from M import * 只导入 __all__ 中列出的名字；若未定义，则导入所有非下划线开头的名字。但若 f1/f2 是以下划线开头的私有函数，则不会被导入。",
       knowledge_point: "第5章 函数与模块"
     },
@@ -7643,7 +7643,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "模块可以放在任何一个包或子包中。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "正确。Python 支持嵌套包结构，模块可置于任意层级的包中，只要路径正确且包含 __init__.py（Python <3.3）或符合命名空间规则。",
       knowledge_point: "第5章 函数与模块"
     },
@@ -7651,7 +7651,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "在一个函数中定义的变量在另一个函数中不能使用。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "正确。局部变量的作用域仅限于定义它的函数，其他函数无法直接访问（除非通过 global 声明或返回值传递）。",
       knowledge_point: "第5章 函数与模块"
     },
@@ -7659,7 +7659,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "在所有函数外定义的变量就是全局变量。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "正确。模块顶层定义的变量属于全局作用域，是全局变量。",
       knowledge_point: "第5章 函数与模块"
     },
@@ -7667,7 +7667,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "对于计算1+2+…+n的这个问题，可以设计递归函数完成求解。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "正确。例如：def sum_n(n): return n if n<=1 else n + sum_n(n-1)。",
       knowledge_point: "第5章 函数与模块"
     },
@@ -7675,7 +7675,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "定义函数时，使用return关键字指定函数返回的值。()",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "正确。return 用于返回函数结果。",
       knowledge_point: "第5章 函数与模块"
     },
@@ -7683,7 +7683,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "python语言标准库中，若要生成伪随机数，可以用fractions。()",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "错误。fractions 模块用于处理有理数（分数），生成随机数应使用 random 模块。",
       knowledge_point: "第5章 函数与模块"
     },
@@ -7691,7 +7691,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "在同一个作用域内，局部变量会隐藏同名的全局变量。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "正确。在函数内若定义了与全局变量同名的局部变量，则全局变量在此函数内被遮蔽（shadowed）。",
       knowledge_point: "第5章 函数与模块"
     },
@@ -7699,7 +7699,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "全局变量会增加不同函数之间的隐式耦合度，从而降低代码可读性，因此应尽量避免过多使用全局变量。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "正确。这是良好的编程实践建议，全局变量使函数依赖外部状态，不利于测试和维护。",
       knowledge_point: "第5章 函数与模块"
     },
@@ -7843,7 +7843,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "利用一个类可以创建多个对象，且每个对象可以存储不同的数据。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "正确。每个对象拥有独立的实例属性空间，数据互不影响。",
       knowledge_point: "第6章 面向对象程序设计"
     },
@@ -7851,7 +7851,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "类的封装性是指将一个数据相关的属性封装在一起。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "错误。封装性不仅指数据聚合，更重要的是将数据（属性）和操作数据的方法（行为）捆绑在一起，并控制对外访问（如通过私有属性和公共接口）。",
       knowledge_point: "第6章 面向对象程序设计"
     },
@@ -7859,7 +7859,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "为一个对象动态绑定的新属性，只能通过该对象访问。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "正确。通过 obj.attr = value 动态添加的属性属于该实例，其他实例无法访问。",
       knowledge_point: "第6章 面向对象程序设计"
     },
@@ -7867,7 +7867,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "已知类的普通方法func有3个形参且都没有默认参数值，则调用该方法时必须传入对应的3个实参。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "错误。普通方法的第一个参数是 self（代表实例），调用时由 Python 自动传入，用户只需提供其余2个实参。",
       knowledge_point: "第6章 面向对象程序设计"
     },
@@ -7875,7 +7875,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "已知Student类有一个属性__id，stu是Student类的对象，则通过“stu.__id='1810101'”可以将stu对象中的__id属性赋值为字符串'1810101'。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "错误。__id 会被名字修饰为 _Student__id，直接 stu.__id 赋值会创建一个新的公有属性 __id，而非修改私有属性。",
       knowledge_point: "第6章 面向对象程序设计"
     },
@@ -7883,7 +7883,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "构造方法可以没有形参。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "错误。构造方法 __init__ 至少有一个参数 self，代表实例本身。无其他参数是可以的，但不能“没有形参”。",
       knowledge_point: "第6章 面向对象程序设计"
     },
@@ -7891,7 +7891,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "析构方法可以没有形参。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "错误。析构方法 __del__ 必须至少有一个参数 self，代表即将被销毁的实例。",
       knowledge_point: "第6章 面向对象程序设计"
     },
@@ -7899,7 +7899,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "__str__方法的返回值可以是整数。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "错误。__str__ 必须返回字符串类型（str），否则 print() 会报错。",
       knowledge_point: "第6章 面向对象程序设计"
     },
@@ -7907,7 +7907,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "基于已有的类创建新的类是面向对象中的多态性。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "错误。这是继承性。多态性是指同一方法在不同类中有不同实现。",
       knowledge_point: "第6章 面向对象程序设计"
     },
@@ -7915,7 +7915,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "已知A类中定义了方法fa1和fa2，B类中定义了方法fb，A是B的子类，则B类中包含了3个方法。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "错误。若 A 是 B 的子类，则 A 继承 B 的方法。但题干说“A是B的子类”，即 B 是父类，A 是子类，那么 B 不会包含 A 的方法。B 只有 fb。",
       knowledge_point: "第6章 面向对象程序设计"
     },
@@ -7923,7 +7923,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "方法重写是指子类可以对从父类中继承过来的方法进行重新定义，从而使得子类对象可以表现出与父类对象不同的行为。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "正确。这是方法重写（override）的定义，是实现多态的关键机制。",
       knowledge_point: "第6章 面向对象程序设计"
     },
@@ -7931,7 +7931,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "使用获取到的父类代理对象可以在子类中调用被重写的父类方法。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "正确。通过 super().method() 可调用父类中被重写的方法。",
       knowledge_point: "第6章 面向对象程序设计"
     },
@@ -7939,7 +7939,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "已知B是A的父类，a是A类的对象，b是B类的对象，则“isinstance(a,type(b))”返回结果为True。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "正确。type(b) 返回 B 类，a 是 A 的实例，而 A 继承自 B，因此 isinstance(a, B) 为 True。",
       knowledge_point: "第6章 面向对象程序设计"
     },
@@ -7947,7 +7947,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "如果使用类的实例对象调用类方法，则类方法中的第一个参数指向该实例对象。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "错误。类方法的第一个参数是 cls（类本身），无论通过类还是实例调用，cls 都指向类，而非实例。",
       knowledge_point: "第6章 面向对象程序设计"
     },
@@ -7955,7 +7955,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "如果一个属性只有用于获取属性值的getter方法，而没有用于设置属性值的setter方法，则该属性是一个只读属性。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "正确。使用 @property 定义 getter 而不定义 setter，该属性只能读取，不能赋值（否则报 AttributeError）。",
       knowledge_point: "第6章 面向对象程序设计"
     },
@@ -7963,7 +7963,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "使用sort()函数时，如果列表中的元素都是数字，则默认按降序排序。()",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "错误。list.sort() 和 sorted() 默认按升序排序。降序需设置 reverse=True。",
       knowledge_point: "第6章 面向对象程序设计"
     },
@@ -7971,7 +7971,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "如果两个类具有“一般-特殊”的逻辑关系，那么特殊类就可以作为一般类的“父类”来定义，将属性和方法继承给“子类”。()",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "错误。应该是“一般类”作为父类，“特殊类”作为子类。例如：Animal（一般）→ Dog（特殊），Dog 继承 Animal。",
       knowledge_point: "第6章 面向对象程序设计"
     },
@@ -7979,7 +7979,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "类的出现，为面向对象编程的三个最重要的特征，即封装性、继承性和多态性，提供了实现的手段。()",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "正确。类是实现封装、继承、多态三大特性的基础机制。",
       knowledge_point: "第6章 面向对象程序设计"
     },
@@ -8091,7 +8091,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "使用三引号创建字符串时允许直接将字符串写成多行的形式。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "正确。三引号（''' 或 \"\"\"）支持跨行书写，保留换行符。",
       knowledge_point: "第7章 字符串与正则表达式"
     },
@@ -8099,7 +8099,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "已知“str='abcdefabc'”，则执行“str.replace('abc','cba')”后，str中保存的字符串为'cbadefcba'。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "错误。字符串是不可变对象，replace() 返回新字符串，不会修改原 str。原 str 仍为 'abcdefabc'。",
       knowledge_point: "第7章 字符串与正则表达式"
     },
@@ -8107,7 +8107,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "已知“str='Like'”，则执行“str.upper()”后，str保存的数据为字符串'LIKE'。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "错误。str.upper() 返回新字符串 'LIKE'，但原变量 str 未被重新赋值，仍为 'Like'。",
       knowledge_point: "第7章 字符串与正则表达式"
     },
@@ -8115,7 +8115,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "使用字符串的format方法进行字符串格式化时，替换字段在字符串中需要用一对大括号括起来。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "正确。例如 'Hello {name}'.format(name='Alice')，{name} 是占位符。",
       knowledge_point: "第7章 字符串与正则表达式"
     },
@@ -8123,7 +8123,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "使用strcmp函数可以进行字符串的比较。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "错误。strcmp 是 C 语言函数，Python 中直接用 ==、!= 或 cmp()（Python 2）比较字符串。",
       knowledge_point: "第7章 字符串与正则表达式"
     },
@@ -8131,7 +8131,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "使用三引号创建字符串时不允许使用转义符。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "错误。三引号字符串中仍然支持转义符，如 \\n、\\t 等。",
       knowledge_point: "第7章 字符串与正则表达式"
     },
@@ -8139,7 +8139,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "已知“str='{s1}的职业是{s2}'”，则执行“str.format(s2='教师',s1='李晓明')”会因传参顺序不正确而报错。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "错误。str.format() 支持关键字参数，顺序无关。结果为 '李晓明的职业是教师'，不会报错。",
       knowledge_point: "第7章 字符串与正则表达式"
     },
@@ -8203,7 +8203,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "使用re.match函数进行正则表达式匹配时，如果指定的匹配选项中包括re.MULTILINE，则会对每一行开头的若干字符作匹配。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "错误。re.match() 始终只从字符串开头匹配，即使使用 re.M（多行模式）也不会改变其行为。要逐行匹配应使用 re.search() 或 re.findall() 配合 ^ 和 re.M。",
       knowledge_point: "第8章 正则表达式"
     },
@@ -8211,7 +8211,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "re.search(r'py$','puppy')返回的是一个Match对象。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "正确。re.search() 在整个字符串中搜索。'puppy' 以 'py' 结尾，r'py$' 匹配成功，返回 Match 对象。",
       knowledge_point: "第8章 正则表达式"
     },
@@ -8219,7 +8219,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "re.search(r'^py','puppy\\npython',re.M)返回的是一个Match对象。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "正确。启用 re.M（多行模式）后，^ 可匹配每行开头。第二行 'python' 以 'py' 开头，因此匹配成功。",
       knowledge_point: "第8章 正则表达式"
     },
@@ -8227,7 +8227,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "已知m是一个Match对象，则m.start(0)返回的是第1个分组的匹配结果字符串在原字符串中的开始位置。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "错误。m.start(0) 返回整个匹配（第0组）的起始位置；第1个分组是 m.start(1)。",
       knowledge_point: "第8章 正则表达式"
     },
@@ -8235,7 +8235,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "re.match(r'py$','puppy')返回的是一个Match对象。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "错误。re.match() 仅从字符串开头匹配。'puppy' 开头是 'pu'，不是 'py'，且 $ 要求结尾，但 match 不扫描全文，故不匹配，返回 None。",
       knowledge_point: "第8章 正则表达式"
     },
@@ -8243,7 +8243,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "re.split(r'<[^<]*?>','<h1>t</h1><div>c</div>')的返回结果是['t','c']。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "错误。re.split() 会保留分隔符之间的内容，包括开头和结尾的空字符串。实际结果为 ['', 't', 'c', '']。只有去除首尾空串后才是 ['t','c']，但 split 默认保留。",
       knowledge_point: "第8章 正则表达式"
     },
@@ -8323,7 +8323,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "os.path.join('.','src','tools')与'.{0}src{0}tools'.format(os.sep)返回的字符串相同。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "os.path.join() 会根据操作系统使用正确的路径分隔符（Windows 用 \\，Linux/macOS 用 /），与 os.sep 一致，因此两者结果相同。",
       knowledge_point: "第9章 文件与目录操作"
     },
@@ -8331,7 +8331,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "假设当前文件夹中包含非空文件 test.dat，那么先后执行语句 fp = open('test.dat', 'rb')、print(fp.read(5))、fp.seek(0)、print(fp.read(5))，连续两次输出的内容是一样的。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "第一次 read(5) 读取前5字节；seek(0) 将文件指针重置到开头；第二次 read(5) 再次读取前5字节，内容相同。",
       knowledge_point: "第9章 文件与目录操作"
     },
@@ -8339,7 +8339,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "使用内置函数open()且以'w'模式打开的文件，文件指针默认指向文件尾。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "错误。'w' 模式会清空文件内容，并将文件指针置于**开头**（位置0）。虽然写入会从头开始覆盖，但指针初始位置是0，不是尾部。'a' 模式才将指针置于文件尾。",
       knowledge_point: "第9章 文件与目录操作"
     },
@@ -8413,7 +8413,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "如果一个异常无法被任何的except子句捕获，则程序会抛出该异常并停止。",
       options: ["对", "错"],
-      answer: "T",
+      answer: true,
       explanation: "正确。未被捕获的异常会向上传播，最终导致程序终止并打印 traceback。",
       knowledge_point: "第10章 异常处理与程序调试"
     },
@@ -8421,7 +8421,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "如果一个except子句捕获多个异常，则多个异常名应写为元组的形式。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "错误。实际上，捕获多个异常的正确语法正是使用元组，例如 except (ValueError, TypeError):。但你的答案是“错”且得满分，说明题目可能存在歧义或表述问题。然而根据标准 Python 语法，此说法应为“对”。但既然系统判“错”为正确，可能题干有陷阱（如“应写为元组” vs “可以写为元组”）。为忠实于你的得分，保留 answer: 'F'，但需注意：实际编程中必须用元组。",
       knowledge_point: "第10章 异常处理与程序调试"
     },
@@ -8429,7 +8429,7 @@ const questionsDataByCourse = {
       type: "true_false",
       question: "已知有语句“assert num==0”，则当num的值为0时会引发AssertionError异常。",
       options: ["对", "错"],
-      answer: "F",
+      answer: false,
       explanation: "错误。assert 条件为 True 时不抛出异常；只有当条件为 False 时才抛出 AssertionError。num==0 为 True，故不抛异常。",
       knowledge_point: "第10章 异常处理与程序调试"
     }
